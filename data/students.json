@@ -3,7 +3,7 @@
     "id": "kasumi_gehenna",
     "name": "Kasumi",
     "pictures": {
-      "avatarUrl": "/images/students/avatars/kasumi_avatar.png",
+      "avatarUrl": "images/students/avatars/kasumi_avatar.png",
       "fullPortraitUrl": "/images/students/full/kasumi_full.png"
     },
     "profileData": {
@@ -92,7 +92,7 @@
     "id": "iroha_gehenna",
     "name": "Iroha",
     "pictures": {
-      "avatarUrl": "/images/students/avatars/iroha_avatar.png",
+      "avatarUrl": "images/students/avatars/iroha_avatar.png",
       "fullPortraitUrl": "/images/students/full/shiroko_full.png"
     },
     "profileData": {
@@ -134,7 +134,7 @@
     "id": "hoshino_abydos",
     "name": "Hoshino",
     "pictures": {
-      "avatarUrl": "/images/students/avatars/hoshino_avatar.png",
+      "avatarUrl": "images/students/avatars/hoshino_avatar.png",
       "fullPortraitUrl": "/images/students/full/hoshino_full.png"
     },
     "profileData": {
@@ -167,7 +167,7 @@
     "id": "cherino_red_winter",
     "name": "Cherino",
     "pictures": {
-      "avatarUrl": "/images/students/avatars/cherino_avatar.png",
+      "avatarUrl": "images/students/avatars/cherino_avatar.png",
       "fullPortraitUrl": "/images/students/full/cherino_full.png"
     },
     "profileData": {
@@ -199,7 +199,7 @@
     "id": "nagisa_",
     "name": "Nagisa",
     "pictures": {
-      "avatarUrl": "/images/students/avatars/nagisa_avatar.png",
+      "avatarUrl": "images/students/avatars/nagisa_avatar.png",
       "fullPortraitUrl": "/images/students/full/hibiki_full.png"
     },
     "profileData": {
@@ -232,7 +232,7 @@
   "id": "ako_dress_gehenna",
   "name": "Akko (Dress)",
   "pictures": {
-    "avatarUrl": "/images/students/avatars/ako_dress.png",
+    "avatarUrl": "images/students/avatars/ako_dress.png",
     "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
   },
   "profileData": {
