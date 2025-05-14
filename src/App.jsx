@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await fetch('/data/students.json');
+        const response = await fetch('data/students.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         if (!Array.isArray(data)) throw new Error("Fetched data is not an array.");

@@ -4,10 +4,10 @@ import React from 'react';
 import './StudentCard.css'; 
 
 // URLs para imágenes (Asegúrate de tener estas imágenes en tu carpeta public/images/...)
-const starFilledIcon = '/images/icons/star_filled.png';
-const attackTypeIconUrl = '/images/icons/attack_icon.jpg'; // Cambiado a .png por consistencia, ajusta si son .jpg
-const armorTypeIconUrl = '/images/icons/armor_icon.jpg';   // Cambiado a .png, ajusta si son .jpg
-const uniqueWeaponIndicatorIconUrl = '/images/ue/weapon_icon.png'; // Icono para el indicador de UE
+const starFilledIcon = 'images/icons/star_filled.png';
+const attackTypeIconUrl = 'images/icons/attack_icon.jpg'; // Cambiado a .png por consistencia, ajusta si son .jpg
+const armorTypeIconUrl = 'images/icons/armor_icon.jpg';   // Cambiado a .png, ajusta si son .jpg
+const uniqueWeaponIndicatorIconUrl = 'images/ue/weapon_icon.png'; // Icono para el indicador de UE
 
 const StarRatingSquare = ({ rating }) => {
   const stars = Array(rating).fill(null);
