@@ -1,0 +1,320 @@
+[
+  {
+    "id": "kasumi_gehenna",
+    "name": "Kasumi",
+    "pictures": {
+      "avatarUrl": "/images/students/avatars/kasumi_avatar.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 5,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 27,
+      "role": "Dealer",
+      "position": "Middle",
+      "attackType": "Sonic",
+      "armorType": "Heavy",
+      "school": "Gehenna Academy",
+      "club": "Hot Springs Department",
+      "usesCover": false, 
+      "weaponType": "MG" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": true,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+  {
+    "id": "iroha_gehenna",
+    "name": "Iroha",
+    "pictures": {
+      "avatarUrl": "/images/students/avatars/iroha_avatar.png",
+      "fullPortraitUrl": "/images/students/full/shiroko_full.png"
+    },
+    "profileData": {
+      "currentStars": 5,
+      "combatClass": "Special",
+      "level": 90,
+      "bondLevel": 25,
+      "role": "T.S.",
+      "position": "Back",
+      "attackType": "Mystic",
+      "armorType": "Heavy",
+      "school": "Gehenna",
+      "club": "Pandemonium Society",
+      "usesCover": false,
+      "weaponType": "HG"
+    },
+    "stats": {
+      "maxHp": 35000, "attack": 4200, "defense": 210, "healingPower": 0,
+      "accuracy": 700, "evasion": 800, "critRatePoints": 600, "critResistancePoints": 0,
+      "critDamagePercent": 200, "critDamageResistance": 0, "stabilityPoints": 1400,
+      "attackRange": 550, "ccPowerPoints": 0, "ccResistancePoints": 0, "defensePiercing": 0,
+      "ammo": { "magazineSize": 30, "shotsPerBurst": 3 },
+      "terrainAffinity": { "urban": "A", "outdoors": "S", "indoors": "B" }
+    },
+    "skills": {
+      "ex": { "name": "Drone Strike: All-Out Attack", "iconUrl": "/images/skills/shiroko_ex.png", "cost": 3, "level": 5, "description": "Shiroko EX Skill description." },
+      "normal": { "name": "Pinpoint Shot", "iconUrl": "/images/skills/shiroko_normal.png", "level": 10, "description": "Shiroko Normal Skill description." },
+      "passive": { "name": "Lone Wolf", "iconUrl": "/images/skills/shiroko_passive.png", "level": 10, "description": "Shiroko Passive Skill description." },
+      "sub": { "name": "Tactical Maneuver", "iconUrl": "/images/skills/shiroko_sub.png", "level": 10, "description": "Shiroko Sub Skill description." }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": true, "name": "WHITE FANG 465", "description": "Shiroko's assault rifle.", "level": 50, "stars": 3,
+      "imageUrl": "/images/ue/shiroko_ue.png",
+      "skill": { "name": "Lone Wolf+", "description": "Enhanced passive for Shiroko.", "iconUrl": "/images/skills/shiroko_passive_ue.png" }
+    },
+    "personalNotes": "My main damage dealer for Explosive content."
+  },
+  {
+    "id": "hoshino_abydos",
+    "name": "Hoshino",
+    "pictures": {
+      "avatarUrl": "/images/students/avatars/hoshino_avatar.png",
+      "fullPortraitUrl": "/images/students/full/hoshino_full.png"
+    },
+    "profileData": {
+      "currentStars": 5, "combatClass": "Striker", "level": 90, "bondLevel": 30,
+      "role": "Tank", "position": "Front", "attackType": "Piercing", "armorType": "Heavy",
+      "school": "Abydos High School", "club": "Foreclosure Task Force", "usesCover": true, "weaponType": "SG"
+    },
+    "stats": {
+      "maxHp": 75000, "attack": 2800, "defense": 550, "healingPower": 0,
+      "accuracy": 150, "evasion": 100, "critRatePoints": 100, "critResistancePoints": 200,
+      "critDamagePercent": 200, "critDamageResistance": 100, "stabilityPoints": 2000,
+      "attackRange": 350, "ccPowerPoints": 0, "ccResistancePoints": 100, "defensePiercing": 0,
+      "ammo": { "magazineSize": 5, "shotsPerBurst": 1 },
+      "terrainAffinity": { "urban": "S", "outdoors": "B", "indoors": "A" }
+    },
+    "skills": {
+      "ex": { "name": "Tactical Suppression", "iconUrl": "/images/skills/hoshino_ex.png", "cost": 6, "level": 5, "description": "Hoshino EX." },
+      "normal": { "name": "Counterattack Posture", "iconUrl": "/images/skills/hoshino_normal.png", "level": 10, "description": "Hoshino Normal." },
+      "passive": { "name": "Veteran's Tenacity", "iconUrl": "/images/skills/hoshino_passive.png", "level": 10, "description": "Hoshino Passive." },
+      "sub": { "name": "Support Fire", "iconUrl": "/images/skills/hoshino_sub.png", "level": 10, "description": "Hoshino Sub." }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": true, "name": "Eye of Horus", "description": "Hoshino's shield/shotgun.", "level": 40, "stars": 1,
+      "imageUrl": "/images/ue/hoshino_ue.png",
+      "skill": { "name": "Veteran's Tenacity+", "description": "Enhanced Hoshino passive.", "iconUrl": "/images/skills/hoshino_passive_ue.png" }
+    },
+    "personalNotes": "Best lazy Tank."
+  },
+  {
+    "id": "cherino_red_winter",
+    "name": "Cherino",
+    "pictures": {
+      "avatarUrl": "/images/students/avatars/cherino_avatar.png",
+      "fullPortraitUrl": "/images/students/full/cherino_full.png"
+    },
+    "profileData": {
+      "currentStars": 5, "combatClass": "Striker", "level": 90, "bondLevel": 22,
+      "role": "Dealer", "position": "Middle", "attackType": "Piercing", "armorType": "Light",
+      "school": "Red Winter", "club": "Red Winter Office", "usesCover": true, "weaponType": "HG"
+    },
+    "stats": {
+      "maxHp": 70878, "attack": 4552, "defense": 107, "healingPower": 5754,
+      "accuracy": 101, "evasion": 1531, "critRatePoints": 603, "critResistancePoints": 100,
+      "critDamagePercent": 224, "critDamageResistance": 50, "stabilityPoints": 980,
+      "attackRange": 550, "ccPowerPoints": 100, "ccResistancePoints": 100, "defensePiercing": 0,
+      "ammo": { "magazineSize": 6, "shotsPerBurst": 1 },
+      "terrainAffinity": { "urban": "B", "outdoors": "S", "indoors": "D" }
+    },
+    "skills": {
+      "ex": { "name": "Call in the Guards!", "iconUrl": "/images/skills/serina_ex.png", "cost": 5, "level": 5, "description": "Deals 605% damage to enemies in a circular area around Cherino." },
+      "normal": { "name": "You Shall Be Purged!", "iconUrl": "/images/skills/serina_normal.png", "level": 10, "description": "Every 40s, applies Focused Assault to the enemy with the highest ATK, and lowers their Crit DMG RES by 35.6% for 15s" },
+      "passive": { "name": "Mustache Power!", "iconUrl": "/images/skills/serina_passive.png", "level": 10, "description": "Increases ATK by 14%." },
+      "sub": { "name": "Respect the 'Stache!", "iconUrl": "/images/skills/serina_sub.png", "level": 10, "description": "Increases Cost Recovery by 511. Effect is increased by 146 for every other Red Winter student in the same unit (up to a maximum of 3 times)." }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": true, "name": "Chistka", "description": "A pistol Cherino uses to purge dissenters.\nCherino simply aims the pistol and shouts, \"Purge!\" And just like that, it's done—without even pulling the trigger.", "level": 0, "stars": 0,
+      "imageUrl": "", "skill": { "name": "Mustache Power!+", "description": "Increases ATK by 393 plus a further 26.6%.", "iconUrl": "" }
+    },
+    "personalNotes": "Essential low-cost healer."
+  },
+  {
+    "id": "nagisa_",
+    "name": "Nagisa",
+    "pictures": {
+      "avatarUrl": "/images/students/avatars/nagisa_avatar.png",
+      "fullPortraitUrl": "/images/students/full/hibiki_full.png"
+    },
+    "profileData": {
+      "currentStars": 5, "combatClass": "Special", "level": 90, "bondLevel": 22,
+      "role": "Dealer", "position": "Back", "attackType": "Explosive", "armorType": "Heavy",
+      "school": "Trinity", "club": "Tea Party", "usesCover": false, "weaponType": "HG"
+    },
+    "stats": {
+      "maxHp": 28000, "attack": 4800, "defense": 180, "healingPower": 0,
+      "accuracy": 800, "evasion": 150, "critRatePoints": 200, "critResistancePoints": 0,
+      "critDamagePercent": 200, "critDamageResistance": 0, "stabilityPoints": 1600,
+      "attackRange": 1000, "ccPowerPoints": 100, "ccResistancePoints": 0, "defensePiercing": 0,
+      "ammo": { "magazineSize": 1, "shotsPerBurst": 1 },
+      "terrainAffinity": { "urban": "A", "outdoors": "SS", "indoors": "D" }
+    },
+    "skills": {
+      "ex": { "name": "Surprise Mortar Support", "iconUrl": "/images/skills/hibiki_ex.png", "cost": 4, "level": 5, "description": "Hibiki EX." },
+      "normal": { "name": "Targeted Fire Support", "iconUrl": "/images/skills/hibiki_normal.png", "level": 10, "description": "Hibiki Normal." },
+      "passive": { "name": "Precision Bombardment", "iconUrl": "/images/skills/hibiki_passive.png", "level": 10, "description": "Hibiki Passive." },
+      "sub": { "name": "Cheer Up!", "iconUrl": "/images/skills/hibiki_sub.png", "level": 10, "description": "Hibiki Sub." }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": true, "name": "Ticket to Trouble", "description": "Hibiki's mortar.", "level": 30, "stars": 1,
+      "imageUrl": "/images/ue/hibiki_ue.png",
+      "skill": { "name": "Precision Bombardment+", "description": "Enhanced Hibiki passive.", "iconUrl": "/images/skills/hibiki_passive_ue.png" }
+    },
+    "personalNotes": "Queen of AoE Explosive damage."
+  },
+  {
+  "id": "ako_dress_gehenna",
+  "name": "Akko (Dress)",
+  "pictures": {
+    "avatarUrl": "/images/students/avatars/ako_dress.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 4,
+    "combatClass": "Striker",
+    "level": 90,
+    "bondLevel": 1,
+    "role": "Support",
+    "position": "Middle",
+    "attackType": "Explosive",
+    "armorType": "Special",
+    "school": "Gehenna",
+    "club": "Prefect Team",
+    "usesCover": true,
+    "weaponType": "HG"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": false,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+}
+]
