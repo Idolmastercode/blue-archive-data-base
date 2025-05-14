@@ -23,7 +23,7 @@ const StarRatingSquare = ({ rating }) => {
 function StudentCard_Square({ student }) {
   // Asegúrate de extraer 'uniqueWeapon' de las props de student
   const { id = 'unknown', name = 'Unnamed', pictures = {}, profileData = {}, uniqueWeapon = {} } = student; 
-  const { avatarUrl = '/images/placeholder_avatar.png' } = pictures;
+  const { avatarUrl = 'images/placeholder_avatar.png' } = pictures;
   const {
     currentStars = 0,
     attackType = 'N/A',
