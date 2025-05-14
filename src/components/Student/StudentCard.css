@@ -1,0 +1,166 @@
+/* src/components/Student/StudentCard_Square.css - Diseño "Pro" Refinado v2 (con tus ajustes) */
+.student-card-pro-container {
+  margin: 12px;
+  display: inline-block;
+  border-radius: 15px; /* Radio para el contorno */
+  padding: 0;
+  position: relative;
+  transition: box-shadow 0.3s ease-out;
+  /* Borde leve permanente del color respectivo, ahora un poco más opaco */
+}
+
+/* Borde leve permanente y sombra al hover para Striker */
+.student-card-pro-container.pro-border-striker {
+  /* Un color de borde un poco más visible y menos transparente */
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1); /* Aumentada opacidad y grosor */
+}
+.student-card-pro-container.pro-border-striker:hover {
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1), /* Borde rojo más intenso y opaco */
+              0 0 22px 6px rgba(255, 77, 77, 0.5); /* Sombra/brillo rojizo un poco más extendido */
+}
+
+/* Borde leve permanente y sombra al hover para Special */
+.student-card-pro-container.pro-border-special {
+  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1); /* Aumentada opacidad y grosor */
+}
+.student-card-pro-container.pro-border-special:hover {
+  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1), /* Borde azul más intenso y opaco */
+              0 0 22px 6px rgba(77, 138, 255, 0.5); /* Sombra/brillo azulado un poco más extendido */
+}
+
+
+/* Tarjeta interna */
+.student-card-pro {
+  width: 175px;
+  min-height: 235px;
+  background-color: #ffffff;
+  border-radius: 15px; 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* Necesario si .avatar-unique-weapon-indicator se posicionara respecto a este, pero ahora es respecto al avatar */
+  z-index: 1;
+  transition: transform 0.05s linear; 
+}
+
+.student-avatar-pro-area {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: visible; /* CAMBIO: De hidden a visible para que el icono UE no se corte si se sale un poco */
+  background-color: #e0e6ed;
+  margin-bottom: 10px;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+  position: relative; /* ¡CLAVE! Para posicionar el icono del arma con respecto al avatar */
+}
+
+.student-avatar-pro {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Para asegurar que la imagen también sea circular si es cuadrada */
+}
+
+/* --- NUEVO / AJUSTADO: Estilos para el Indicador de Arma Única en el Avatar --- */
+.avatar-unique-weapon-indicator {
+  position: absolute;
+  bottom: -4px;  /* Ajusta para la posición vertical (negativo para superponerse al borde del avatar) */
+  right: -4px; /* Ajusta para la posición horizontal */
+  width: 28px; /* Tamaño del círculo amarillo */
+  height: 28px;
+  background-color: #FFD700; /* Amarillo del círculo */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white; /* Borde blanco para separarlo del avatar */
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4); /* Sombra para el círculo */
+  padding: 2px; 
+  box-sizing: border-box; 
+  z-index: 2; /* Para asegurar que esté encima del avatar si hay superposición */
+}
+
+.avatar-ue-icon { /* Icono weapon_icon.png dentro del círculo amarillo */
+  width: 16px; 
+  height: 16px;
+}
+/* --- FIN de Estilos para el Indicador de Arma Única --- */
+
+
+.student-info-pro-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.student-name-pro {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Tu sombra de texto */
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tu fuente */
+}
+
+.star-rating-pro {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.star-icon-pro {
+  width: 18px;
+  height: 18px;
+  margin: 0 1px;
+}
+
+.types-tags-pro-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+  align-items: center;
+  width: 100%;
+}
+
+.type-tag-pro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  min-width: 95px; 
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.type-tag-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Colores para type-tag-pro */
+.attack-type-explosive, .armor-type-light { background-color: #e74c3c; }
+.attack-type-piercing, .armor-type-heavy { background-color: #f39c12; }
+.attack-type-mystic, .armor-type-special { background-color: #3498db; }
+.attack-type-sonic, .armor-type-elastic { background-color: #9b59b6; }
