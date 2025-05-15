@@ -3,7 +3,7 @@
     "id": "kasumi_gehenna",
     "name": "Kasumi",
     "pictures": {
-      "avatarUrl": "images/students/avatars/kasumi_avatar.png",
+      "avatarUrl": "images/students/avatars/kasumi.png",
       "fullPortraitUrl": "/images/students/full/kasumi_full.png"
     },
     "profileData": {
@@ -15,7 +15,7 @@
       "position": "Middle",
       "attackType": "Sonic",
       "armorType": "Heavy",
-      "school": "Gehenna Academy",
+      "school": "Gehenna",
       "club": "Hot Springs Department",
       "usesCover": false, 
       "weaponType": "MG" 
@@ -92,7 +92,7 @@
     "id": "iroha_gehenna",
     "name": "Iroha",
     "pictures": {
-      "avatarUrl": "images/students/avatars/iroha_avatar.png",
+      "avatarUrl": "images/students/avatars/iroha.png",
       "fullPortraitUrl": "/images/students/full/shiroko_full.png"
     },
     "profileData": {
@@ -134,7 +134,7 @@
     "id": "hoshino_abydos",
     "name": "Hoshino",
     "pictures": {
-      "avatarUrl": "images/students/avatars/hoshino_avatar.png",
+      "avatarUrl": "images/students/avatars/hoshino.png",
       "fullPortraitUrl": "/images/students/full/hoshino_full.png"
     },
     "profileData": {
@@ -164,10 +164,10 @@
     "personalNotes": "Best lazy Tank."
   },
   {
-    "id": "cherino_red_winter",
+    "id": "cherino",
     "name": "Cherino",
     "pictures": {
-      "avatarUrl": "images/students/avatars/cherino_avatar.png",
+      "avatarUrl": "images/students/avatars/cherino.png",
       "fullPortraitUrl": "/images/students/full/cherino_full.png"
     },
     "profileData": {
@@ -199,7 +199,7 @@
     "id": "nagisa_",
     "name": "Nagisa",
     "pictures": {
-      "avatarUrl": "images/students/avatars/nagisa_avatar.png",
+      "avatarUrl": "images/students/avatars/nagisa.png",
       "fullPortraitUrl": "/images/students/full/hibiki_full.png"
     },
     "profileData": {
@@ -497,7 +497,7 @@
 },
   {
   "id": "meru",
-  "name": "Meru)",
+  "name": "Meru",
   "pictures": {
     "avatarUrl": "images/students/avatars/meru.png",
     "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
@@ -838,6 +838,363 @@
   },
   "uniqueWeapon": {
     "hasUniqueWeapon": true,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+},
+
+  {
+  "id": "ui_swimsuit",
+  "name": "Ui (Swimsuit)",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/ui_swimsuit.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 3,
+    "combatClass": "Striker",
+    "level": 90,
+    "bondLevel": 19,
+    "role": "Support",
+    "position": "Back",
+    "attackType": "Piercing",
+    "armorType": "Elastic",
+    "school": "Trinity",
+    "club": "Library Committee",
+    "usesCover": true,
+    "weaponType": "SR"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": false,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+},
+  {
+  "id": "himari",
+  "name": "Himari",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/himari.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 3,
+    "combatClass": "Special",
+    "level": 90,
+    "bondLevel": 20,
+    "role": "Support",
+    "position": "Back",
+    "attackType": "Piercing",
+    "armorType": "Light",
+    "school": "Millennium",
+    "club": "Super Phenomenon Task Force",
+    "usesCover": false,
+    "weaponType": "HG"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": false,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+},
+  {
+  "id": "cherino_hot_spring",
+  "name": "Cherino (Hot Spring)",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/cherino_hot_spring.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 3,
+    "combatClass": "Special",
+    "level": 90,
+    "bondLevel": 20,
+    "role": "T.S.",
+    "position": "Back",
+    "attackType": "Explosive",
+    "armorType": "Heavy",
+    "school": "Red Winter",
+    "club": "Red Winter Office",
+    "usesCover": false,
+    "weaponType": "HG"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": false,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+},
+  {
+  "id": "kirara",
+  "name": "Kirara",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/kirara.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 3,
+    "combatClass": "Striker",
+    "level": 90,
+    "bondLevel": 20,
+    "role": "Dealer",
+    "position": "Middle",
+    "attackType": "Sonic",
+    "armorType": "Light",
+    "school": "Gehenna",
+    "club": "Sparkle Club",
+    "usesCover": true,
+    "weaponType": "AR"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": false,
     "name": "",
     "description": "",
     "level": 0,
