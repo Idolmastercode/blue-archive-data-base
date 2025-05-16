@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Mis niñas consentidas</h1>
+        <h1>Mis estudiantes consentidas</h1>
       </header>
 
       <main>
@@ -49,7 +49,7 @@ function App() {
       </main>
 
       <footer className="App-footer">
-        <p>&copy; {new Date().getFullYear()} Mis Niñas Consentidas App. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Idolmastercode – Fan project de Blue Archive. Todos los derechos reservados.</p>
       </footer>
     </div>
   );

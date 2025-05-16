@@ -1,20 +1,16 @@
-/*
-  IMPORTANTE: Este App.css funcionará mejor si los estilos globales de
-  html, body, y #root (el div de montaje de React) están configurados
-  para permitir que .App ocupe el 100% del ancho y alto, como se
-  sugirió en la modificación de index.css.
-*/
+/* App.css */
 
-/* Estos estilos de body podrían estar en index.css o aquí. */
-/* Si están en index.css (recomendado), puedes borrarlos de App.css */
+/* Estilos base para el cuerpo de la página.
+   Estos podrían estar en index.css. Si es así, puedes eliminarlos de aquí
+   para evitar duplicaciones o conflictos. */
 body {
   margin: 0;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e9eef2;
-  color: #333a45;
+  background-color: #e9eef2; /* Fondo principal suave */
+  color: #333a45;           /* Color de texto principal */
   line-height: 1.6;
 }
 
@@ -24,20 +20,20 @@ body {
   min-height: 100vh; /* Ocupa al menos la altura completa del viewport */
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila header, main, footer verticalmente */
 }
 
 /* === Encabezado de la Aplicación === */
 .App-header {
   background: linear-gradient(120deg, #4a6d8c 0%, #304a64 100%);
   color: white;
-  padding: 20px 30px;
+  padding: 20px 30px; /* Espaciado interno */
   width: 100%; /* Ocupa el ancho completo de .App */
-  box-sizing: border-box;
-  text-align: center; /* Centra el h1 */
+  box-sizing: border-box; /* El padding no aumenta el ancho total */
+  text-align: center; /* Centra el h1 del header */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0; /* Evita que el header se encoja */
+  flex-shrink: 0; /* Evita que el header se encoja si el contenido es muy grande */
 }
 
 .App-header h1 {
@@ -50,24 +46,108 @@ body {
 
 /* === Contenido Principal === */
 main {
-  width: 100%; /* Ocupa el ancho completo dentro de .App */
-  max-width: 1400px; /* Ancho máximo para el contenido */
+  width: 100%; /* Ocupa el ancho completo disponible dentro de .App */
+  max-width: 1400px; /* Ancho máximo por defecto para el contenido principal */
   margin-left: auto; /* Centra 'main' horizontalmente */
   margin-right: auto; /* Centra 'main' horizontalmente */
-  margin-top: 25px;
-  margin-bottom: 25px;
-  padding: 0 10px; /* Padding lateral */
+  margin-top: 25px; /* Espacio arriba */
+  margin-bottom: 25px; /* Espacio abajo */
+  padding: 0 20px; /* Padding lateral para el contenido de 'main', ajustado para dar un poco más de aire */
   box-sizing: border-box;
-  flex-grow: 1; /* Hace que 'main' ocupe el espacio vertical sobrante */
+  flex-grow: 1; /* Esencial para el "sticky footer", hace que 'main' ocupe el espacio sobrante */
+}
+
+/* Media queries para ajustar max-width de 'main' en pantallas más grandes */
+@media (min-width: 1700px) {
+  main {
+    max-width: 1600px; /* Aumenta el ancho máximo del contenido */
+  }
+}
+
+@media (min-width: 2000px) {
+  main {
+    max-width: 90%; /* Usa un porcentaje para que se adapte sin ser excesivamente ancho */
+                     /* O un valor fijo grande, ej: max-width: 2200px; */
+  }
 }
 
 /* === Lista de Estudiantes === */
 .student-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centra las tarjetas dentro de cada fila */
-  gap: 15px; /* Espaciado entre tarjetas. Ajusta o elimina si tus tarjetas tienen márgenes propios. */
-  padding-bottom: 40px;
+  display: flex; /* Habilita Flexbox */
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea */
+  justify-content: center; /* Centra las tarjetas en la línea o las agrupa al centro */
+  gap: 20px; /* Espacio uniforme entre tarjetas (vertical y horizontal) */
+  padding-bottom: 40px; /* Espacio al final de la lista si es necesario */
+}
+
+/* === Estilos para la clase .student-card === */
+/* Esta clase se aplicará al div contenedor de cada StudentCard_Square desde App.jsx */
+/* Controla cómo cada tarjeta se comporta como un ítem flex. */
+.student-card {
+  flex-grow: 1; /* Permite que la tarjeta se estire para ocupar espacio sobrante en la fila */
+  flex-shrink: 1; /* Permite que la tarjeta se encoja si no hay suficiente espacio (comportamiento por defecto) */
+  
+  /* ANCHO BASE IDEAL: Ajusta este valor. Es el ancho "objetivo" de tus tarjetas. */
+  /* Con este valor, y un gap de 20px, cabrán X tarjetas por fila dependiendo del ancho de 'main'. */
+  /* Ejemplo: si main tiene 1000px de ancho, (1000 - (gaps)) / flex-basis = num tarjetas */
+  flex-basis: 270px; /* Un valor un poco menor para dar más flexibilidad con el gap */
+
+  /* ANCHO MÍNIMO: Las tarjetas no se encogerán más allá de esto. */
+  /* Cuando el espacio sea menor, 'flex-wrap' las moverá a la siguiente línea. */
+  /* Debe ser menor que flex-basis. */
+  min-width: 230px;
+
+  /* Opcional: un max-width para la tarjeta si no quieres que se estire demasiado individualmente. */
+  /* max-width: 320px; */
+}
+
+/* === Media Queries para la Responsividad de las Tarjetas === */
+
+/* Para tablets y pantallas medianas */
+@media (max-width: 992px) { /* Ajusta este breakpoint según necesites */
+  .student-card {
+    flex-basis: 250px; /* Puedes ajustar el basis para que quepan menos tarjetas */
+    min-width: 220px;
+  }
+}
+
+/* Para móviles grandes en vertical y tablets pequeñas */
+@media (max-width: 768px) {
+  main {
+    padding: 0 15px; /* Menos padding lateral en 'main' */
+  }
+  .student-list {
+    gap: 15px; /* Menor gap entre tarjetas */
+  }
+  .student-card {
+    flex-basis: 240px;
+    min-width: 200px; /* Un min-width más pequeño */
+  }
+}
+
+/* Para móviles en vertical */
+@media (max-width: 576px) {
+  .student-card {
+    /* Hacemos que cada tarjeta intente ocupar más espacio, tendiendo a una o dos columnas */
+    flex-basis: calc(50% - 10px); /* Intenta dos tarjetas por fila (considerando el gap de 15px/2 ~ 7.5px por lado) */
+                                   /* Si el gap es 15px, entonces (50% - 7.5px) */
+    min-width: 180px; /* Un min-width aún más pequeño */
+  }
+}
+
+/* Para móviles muy pequeños, asegurar una sola columna */
+@media (max-width: 420px) {
+  main {
+    padding: 0 10px;
+  }
+  .student-list {
+    gap: 10px;
+  }
+  .student-card {
+    flex-basis: 100%; /* Cada tarjeta ocupa toda la fila */
+    min-width: 0; /* Permite que flex-basis: 100% funcione sin restricciones de ancho mínimo. */
+                   /* O un min-width absoluto si lo prefieres, ej: min-width: 160px; */
+  }
 }
 
 /* === Mensajes de Estado (Error, Carga, Vacío) === */
@@ -82,18 +162,19 @@ main {
   text-align: center; /* Centra el texto dentro del mensaje */
 }
 
-main > p { /* Para "Loading...", "No students..." */
+/* Estilos para párrafos directos en 'main', como "Loading..." o "No students..." */
+main > p {
   font-size: 1.2em;
   color: #6c7a89;
   padding: 40px 20px;
-  text-align: center; /* Centra estos mensajes */
+  text-align: center; /* Centra estos mensajes de estado */
 }
 
 /* === Footer === */
 .App-footer {
   background: linear-gradient(120deg, #304a64 0%, #4a6d8c 100%);
   color: white;
-  padding: 20px 30px;
+  padding: 20px 30px; /* Espaciado interno */
   width: 100%; /* Ocupa el ancho completo de .App */
   box-sizing: border-box;
   text-align: center; /* Centra el <p> del footer */

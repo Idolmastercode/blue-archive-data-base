@@ -20,7 +20,7 @@ const StarRatingSquare = ({ rating }) => {
   );
 };
 
-function StudentCard_Square({ student }) {
+function StudentCard({ student }) {
   // Asegúrate de extraer 'uniqueWeapon' de las props de student
   const { id = 'unknown', name = 'Unnamed', pictures = {}, profileData = {}, uniqueWeapon = {} } = student; 
   const { avatarUrl = 'images/placeholder_avatar.png' } = pictures;
@@ -104,4 +104,4 @@ function StudentCard_Square({ student }) {
   );
 }
 
-export default StudentCard_Square;
+export default StudentCard;
