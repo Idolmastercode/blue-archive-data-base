@@ -1,68 +1,106 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/*
+  IMPORTANTE: Este App.css funcionará mejor si los estilos globales de
+  html, body, y #root (el div de montaje de React) están configurados
+  para permitir que .App ocupe el 100% del ancho y alto, como se
+  sugirió en la modificación de index.css.
+*/
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Estos estilos de body podrían estar en index.css o aquí. */
+/* Si están en index.css (recomendado), puedes borrarlos de App.css */
 body {
   margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e9eef2;
+  color: #333a45;
+  line-height: 1.6;
+}
+
+/* === Contenedor Principal de la Aplicación === */
+.App {
+  width: 100%; /* Ocupa el ancho completo de su contenedor padre (#root) */
+  min-height: 100vh; /* Ocupa al menos la altura completa del viewport */
+  margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* === Encabezado de la Aplicación === */
+.App-header {
+  background: linear-gradient(120deg, #4a6d8c 0%, #304a64 100%);
+  color: white;
+  padding: 20px 30px;
+  width: 100%; /* Ocupa el ancho completo de .App */
+  box-sizing: border-box;
+  text-align: center; /* Centra el h1 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Evita que el header se encoja */
 }
 
-button {
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8em; /* Tamaño específico para el título de la app */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+
+/* === Contenido Principal === */
+main {
+  width: 100%; /* Ocupa el ancho completo dentro de .App */
+  max-width: 1400px; /* Ancho máximo para el contenido */
+  margin-left: auto; /* Centra 'main' horizontalmente */
+  margin-right: auto; /* Centra 'main' horizontalmente */
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0 10px; /* Padding lateral */
+  box-sizing: border-box;
+  flex-grow: 1; /* Hace que 'main' ocupe el espacio vertical sobrante */
+}
+
+/* === Lista de Estudiantes === */
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las tarjetas dentro de cada fila */
+  gap: 15px; /* Espaciado entre tarjetas. Ajusta o elimina si tus tarjetas tienen márgenes propios. */
+  padding-bottom: 40px;
+}
+
+/* === Mensajes de Estado (Error, Carga, Vacío) === */
+.error-message {
+  color: #c0392b;
+  padding: 20px;
+  border: 1px solid #c0392b;
+  background-color: #fdecea;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin: 20px auto; /* Centra el bloque del mensaje */
+  max-width: 600px;
+  text-align: center; /* Centra el texto dentro del mensaje */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+main > p { /* Para "Loading...", "No students..." */
+  font-size: 1.2em;
+  color: #6c7a89;
+  padding: 40px 20px;
+  text-align: center; /* Centra estos mensajes */
+}
+
+/* === Footer === */
+.App-footer {
+  background: linear-gradient(120deg, #304a64 0%, #4a6d8c 100%);
+  color: white;
+  padding: 20px 30px;
+  width: 100%; /* Ocupa el ancho completo de .App */
+  box-sizing: border-box;
+  text-align: center; /* Centra el <p> del footer */
+  flex-shrink: 0; /* Evita que el footer se encoja */
+}
+
+.App-footer p {
+  margin: 0;
+  font-size: 0.9em;
 }
