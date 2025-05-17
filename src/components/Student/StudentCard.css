@@ -1,4 +1,4 @@
-/* Estilos para el contenedor principal de la tarjeta de estudiante */
+/* --- ESTILOS DEL CONTENEDOR PRINCIPAL DE LA TARJETA --- */
 .student-card-pro-container {
   margin: 12px;
   display: inline-block;
@@ -8,24 +8,24 @@
   transition: box-shadow 0.3s ease-out;
 }
 
-/* --- Bordes y sombras dinámicas según el tipo de estudiante --- */
+/* --- BORDES Y SOMBRAS DINÁMICAS (STRIKER/SPECIAL) --- */
 .student-card-pro-container.pro-border-striker {
-  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1);
+  box-shadow: 0 0 0 3px rgba(239, 80, 49, 1);
 }
 .student-card-pro-container.pro-border-striker:hover {
-  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1),
-              0 0 22px 6px rgba(255, 77, 77, 0.5);
+  box-shadow: 0 0 0 3px rgba(239, 80, 49, 0.75),
+              0 0 22px 6px rgba(231, 53, 18, 0.75);
 }
 
 .student-card-pro-container.pro-border-special {
-  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1);
+  box-shadow: 0 0 0 3px rgba(7, 133, 251, 1);
 }
 .student-card-pro-container.pro-border-special:hover {
-  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1),
-              0 0 22px 6px rgba(77, 138, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(7, 133, 251, 0.75),
+              0 0 22px 6px rgba(3, 113, 215, 0.75);
 }
 
-/* Estilos para la tarjeta interna del estudiante */
+/* --- ESTILOS DE LA TARJETA INTERNA --- */
 .student-card-pro {
   width: 175px;
   min-height: 235px;
@@ -43,18 +43,18 @@
   transition: transform 0.05s linear;
 }
 
-/* --- Sección del Avatar del Estudiante --- */
+/* --- SECCIÓN DEL AVATAR DEL ESTUDIANTE --- */
 .student-avatar-pro-area {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  overflow: visible; /* Permite que elementos hijos (indicadores) se superpongan */
-  background-color: #e0e6ed; /* Color de fondo si la imagen no carga o tiene transparencia */
+  overflow: visible;
+  background-color: #e0e6ed;
   margin-bottom: 10px;
   border: 3px solid #fff;
   box-shadow: 0 1px 6px rgba(0,0,0,0.5);
   flex-shrink: 0;
-  position: relative; /* Contexto de posicionamiento para los indicadores */
+  position: relative;
 }
 
 .student-avatar-pro {
@@ -65,12 +65,12 @@
   border-radius: 50%;
 }
 
-/* --- Indicador Base para Iconos sobre el Avatar (UE y Rol) --- */
+/* --- INDICADORES SOBRE EL AVATAR (ROL Y ARMA ÚNICA) --- */
 .avatar-indicator-base {
   position: absolute;
-  bottom: -5px; /* Ajustado ligeramente para mejor posicionamiento con nuevo tamaño */
-  width: 30px;   /* Aumentado ligeramente */
-  height: 30px;  /* Aumentado ligeramente */
+  bottom: -5px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -79,45 +79,40 @@
   box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   padding: 2px;
   box-sizing: border-box;
-  z-index: 2; /* Asegura que esté por encima del avatar */
+  z-index: 2;
 }
 
-.avatar-role-icon-image { /* Para la imagen del icono de ROL */
-  width: 17.5px;  /* Tamaño actual, ajústalo si es necesario */
+.avatar-role-icon-image {
+  width: 17.5px;
   height: 17.5px;
-  object-fit: contain; /* Asegura que toda la imagen se vea */
+  object-fit: contain;
 }
 
-.avatar-ue-icon-image { /* Para la imagen del icono de ARMA ÚNICA */
-  width: 20px;  /* Ligeramente más grande para compensar transparencia, ajústalo */
+.avatar-ue-icon-image {
+  width: 20px;
   height: 20px;
-  object-fit: contain; /* Asegura que toda la imagen se vea */
+  object-fit: contain;
 }
 
-/* Indicador de Arma Única (UE) específico */
+/* --- Posicionamiento y color específico para Indicador de Arma Única --- */
 .avatar-unique-weapon-indicator {
-  /* Hereda de .avatar-indicator-base */
-  right: -5px; /* Ajustado ligeramente para simetría y nuevo tamaño */
-  background-color: #ffcb02; /* Amarillo dorado característico */
+  right: -5px;
+  background-color: #ffcb02;
 }
 
-/* Indicador de Rol del Estudiante específico */
+/* --- Posicionamiento y color específico para Indicador de Rol --- */
 .avatar-role-indicator {
-  /* Hereda de .avatar-indicator-base */
-  left: -5px; /* Posicionamiento en el lado izquierdo, simétrico */
-  background-color: #dddddd; /* Gris claro, como solicitaste */
-  /* Podrías usar un gris más específico de Blue Archive si lo tienes */
-  /* background-color: #e0e6ed;  Un gris azulado claro */
+  left: -5px;
+  background-color: #dddddd;
 }
 
-
-/* --- Sección de Información del Estudiante (Nombre, Estrellas, Tipos) --- */
+/* --- SECCIÓN DE INFORMACIÓN (NOMBRE, ESTRELLAS, ETC.) --- */
 .student-info-pro-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: auto; /* Empuja esta sección hacia abajo si hay espacio extra */
+  margin-top: auto;
 }
 
 .student-name-pro {
@@ -133,6 +128,7 @@
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* --- Estilos para la calificación por estrellas --- */
 .star-rating-pro {
   display: flex;
   align-items: center;
@@ -146,7 +142,7 @@
   margin: 0 1px;
 }
 
-/* Agrupación de etiquetas de tipo (ataque, armadura) */
+/* --- ETIQUETAS DE TIPO (ATAQUE Y ARMADURA) --- */
 .types-tags-pro-group {
   display: flex;
   flex-direction: column;

@@ -1,25 +1,23 @@
 import React from 'react';
-import './StudentCard.css'; // Asegúrate de que este archivo CSS esté actualizado
+import './StudentCard.css';
 
-// URLs para imágenes (Asegúrate de tener estas imágenes en tu carpeta public/images/...)
+// --- Definición de Rutas para Iconos y Recursos ---
 const starFilledIcon = 'images/icons/star_filled.png';
-const attackTypeIconUrl = 'images/icons/attack_icon.jpg'; // Ajusta si son .jpg o la ruta correcta
-const armorTypeIconUrl = 'images/icons/armor_icon.jpg';   // Ajusta si son .jpg o la ruta correcta
-const uniqueWeaponIndicatorIconUrl = 'images/ue/weapon_icon.png'; // Ruta al icono de Arma Única
+const attackTypeIconUrl = 'images/icons/attack_icon.jpg';
+const armorTypeIconUrl = 'images/icons/armor_icon.jpg';
+const uniqueWeaponIndicatorIconUrl = 'images/ue/weapon_icon.png';
 
-// --- URLs para iconos de ROL ---
-// Asegúrate de que estas rutas sean correctas y tengas los iconos
 const roleIcons = {
   Dealer: 'images/roles/dealer_icon.png',
   Tank: 'images/roles/tank_icon.png',
   Support: 'images/roles/support_icon.png',
   Healer: 'images/roles/healer_icon.png',
-  "T.S.": 'images/roles/ts_icon.png', // Clave "T.S." para Tactical Support
-  // Añade más roles si es necesario
-  Default: 'images/roles/default_role_icon.png' // Un icono por defecto si el rol no se encuentra
+  "T.S.": 'images/roles/ts_icon.png',
+  Default: 'images/roles/default_role_icon.png'
 };
-// --- ---
+// --- Fin de Definición de Rutas ---
 
+// --- Componente Auxiliar para Mostrar Calificación por Estrellas ---
 const StarRatingSquare = ({ rating }) => {
   const stars = Array(rating).fill(null);
   return (
@@ -30,9 +28,11 @@ const StarRatingSquare = ({ rating }) => {
     </div>
   );
 };
+// --- Fin de Componente StarRatingSquare ---
 
+// --- Componente Principal: StudentCard ---
 function StudentCard({ student }) {
-  // Desestructuración de props con valores por defecto
+  // --- Desestructuración de Props y Valores por Defecto ---
   const {
     id = 'unknown',
     name = 'Unnamed',
@@ -41,22 +41,42 @@ function StudentCard({ student }) {
     uniqueWeapon = {}
   } = student;
 
-  const { avatarUrl = 'images/placeholder_avatar.png' } = pictures; // Placeholder si no hay avatar
+  const { avatarUrl = 'images/placeholder_avatar.png' } = pictures;
   const {
     currentStars = 0,
     attackType = 'N/A',
     armorType = 'N/A',
-    combatClass = 'N/A', // Striker o Special
-    role = 'N/A'         // Dealer, Tank, T.S., etc.
+    combatClass = 'N/A',
+    role = 'N/A'
   } = profileData;
 
-  // Manejador de clic en la tarjeta
+  // --- Manejadores de Eventos de la Tarjeta ---
   const handleCardClick = () => {
     console.log(`Pro Card clicked: ${name} (ID: ${id})`);
-    // Aquí iría la lógica para navegar a la página del estudiante, por ejemplo.
+    // Lógica para navegación o acciones al hacer clic
   };
 
-  // Determinar la clase del borde según el combatClass
+  // --- Lógica para Efecto 3D de Inclinación con el Mouse ---
+  const cardRef = React.useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (!cardRef.current) return;
+    const card = cardRef.current;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = (e.clientX - left - width / 2) / (width / 2);
+    const y = (e.clientY - top - height / 2) / (height / 2);
+    const rotateY = x * 15;
+    const rotateX = y * -15;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+  };
+
+  const handleMouseLeave = () => {
+    if (!cardRef.current) return;
+    cardRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+  };
+  // --- Fin de Lógica para Efecto 3D ---
+
+  // --- Preparación de Datos para Visualización ---
   let cardContainerClass = 'student-card-pro-container';
   if (combatClass === 'Striker') {
     cardContainerClass += ' pro-border-striker';
@@ -64,31 +84,10 @@ function StudentCard({ student }) {
     cardContainerClass += ' pro-border-special';
   }
 
-  // Referencia al elemento de la tarjeta para el efecto 3D
-  const cardRef = React.useRef(null);
-
-  // Efecto de inclinación 3D al mover el ratón
-  const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const card = cardRef.current;
-    const { left, top, width, height } = card.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / (width / 2); // Normaliza de -1 a 1
-    const y = (e.clientY - top - height / 2) / (height / 2); // Normaliza de -1 a 1
-    const rotateY = x * 15; // Grados de rotación en Y
-    const rotateX = y * -15; // Grados de rotación en X (invertido para efecto natural)
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-  };
-
-  // Resetear el efecto 3D cuando el ratón sale
-  const handleMouseLeave = () => {
-    if (!cardRef.current) return;
-    cardRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-  };
-
-  // Limpiar el string del rol (ej. "Dealer," -> "Dealer", "T.S.," -> "T.S.")
   const cleanRole = role ? String(role).replace(/,$/, '') : 'N/A';
   const roleIconUrl = roleIcons[cleanRole] || roleIcons.Default;
 
+  // --- Estructura JSX del Componente StudentCard ---
   return (
     <div
       className={cardContainerClass}
@@ -99,22 +98,21 @@ function StudentCard({ student }) {
       ref={cardRef}
     >
       <div className="student-card-pro">
+        {/* Sección del Avatar e Indicadores */}
         <div className="student-avatar-pro-area">
           <img
             src={avatarUrl}
             alt={`${name} Avatar`}
             className="student-avatar-pro"
-            loading="lazy" // Carga diferida para imágenes
+            loading="lazy"
           />
 
-          {/* Indicador de Rol del Estudiante (IZQUIERDA) */}
           {cleanRole && cleanRole !== 'N/A' && (
             <div className="avatar-indicator-base avatar-role-indicator" title={`Rol: ${cleanRole}`}>
               <img src={roleIconUrl} alt={`${cleanRole} Role`} className="avatar-role-icon-image" />
             </div>
           )}
 
-          {/* Indicador de Arma Única (DERECHA) */}
           {uniqueWeapon && uniqueWeapon.hasUniqueWeapon && (
             <div className="avatar-indicator-base avatar-unique-weapon-indicator" title="Arma Única equipada">
               <img src={uniqueWeaponIndicatorIconUrl} alt="Unique Weapon Equipped" className="avatar-ue-icon-image" />
@@ -122,6 +120,7 @@ function StudentCard({ student }) {
           )}
         </div>
 
+        {/* Sección de Información del Estudiante */}
         <div className="student-info-pro-area">
           <h3 className="student-name-pro">{name}</h3>
           <StarRatingSquare rating={currentStars} />
@@ -140,5 +139,6 @@ function StudentCard({ student }) {
     </div>
   );
 }
+// --- Fin de Componente StudentCard ---
 
 export default StudentCard;

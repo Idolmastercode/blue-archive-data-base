@@ -1,187 +1,192 @@
-/* App.css */
-
-/* Estilos base para el cuerpo de la página.
-   Estos podrían estar en index.css. Si es así, puedes eliminarlos de aquí
-   para evitar duplicaciones o conflictos. */
+/* --- ESTILOS BASE Y DEL CUERPO DE LA PÁGINA --- */
 body {
   margin: 0;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e9eef2; /* Fondo principal suave */
-  color: #333a45;           /* Color de texto principal */
+  background-color: #e9eef2;
+  color: #333a45;
   line-height: 1.6;
 }
 
-/* === Contenedor Principal de la Aplicación === */
+/* --- CONTENEDOR PRINCIPAL DE LA APLICACIÓN (.App) --- */
 .App {
-  width: 100%; /* Ocupa el ancho completo de su contenedor padre (#root) */
-  min-height: 100vh; /* Ocupa al menos la altura completa del viewport */
+  width: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  display: flex; /* Habilita Flexbox */
-  flex-direction: column; /* Apila header, main, footer verticalmente */
+  display: flex;
+  flex-direction: column;
 }
 
-/* === Encabezado de la Aplicación === */
+/* --- ENCABEZADO DE LA APLICACIÓN (.App-header) --- */
 .App-header {
   background: linear-gradient(120deg, #4a6d8c 0%, #304a64 100%);
   color: white;
-  padding: 20px 30px; /* Espaciado interno */
-  width: 100%; /* Ocupa el ancho completo de .App */
-  box-sizing: border-box; /* El padding no aumenta el ancho total */
-  text-align: center; /* Centra el h1 del header */
+  padding: 20px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0; /* Evita que el header se encoja si el contenido es muy grande */
+  flex-shrink: 0;
 }
 
 .App-header h1 {
   margin: 0;
-  font-size: 1.8em; /* Tamaño específico para el título de la app */
+  font-size: 1.8em;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-shadow: 0 1px 1px rgba(0,0,0,0.15);
 }
 
-/* === Contenido Principal === */
+/* --- ÁREA DE CONTENIDO PRINCIPAL (main) --- */
 main {
-  width: 100%; /* Ocupa el ancho completo disponible dentro de .App */
-  max-width: 1400px; /* Ancho máximo por defecto para el contenido principal */
-  margin-left: auto; /* Centra 'main' horizontalmente */
-  margin-right: auto; /* Centra 'main' horizontalmente */
-  margin-top: 25px; /* Espacio arriba */
-  margin-bottom: 25px; /* Espacio abajo */
-  padding: 0 20px; /* Padding lateral para el contenido de 'main', ajustado para dar un poco más de aire */
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0 20px;
   box-sizing: border-box;
-  flex-grow: 1; /* Esencial para el "sticky footer", hace que 'main' ocupe el espacio sobrante */
+  flex-grow: 1;
 }
 
-/* Media queries para ajustar max-width de 'main' en pantallas más grandes */
-@media (min-width: 1700px) {
-  main {
-    max-width: 1600px; /* Aumenta el ancho máximo del contenido */
-  }
-}
+@media (min-width: 1700px) { main { max-width: 1600px; } }
+@media (min-width: 2000px) { main { max-width: 90%; } }
 
-@media (min-width: 2000px) {
-  main {
-    max-width: 90%; /* Usa un porcentaje para que se adapte sin ser excesivamente ancho */
-                     /* O un valor fijo grande, ej: max-width: 2200px; */
-  }
-}
-
-/* === Lista de Estudiantes === */
+/* --- LISTA DE ESTUDIANTES (.student-list) --- */
 .student-list {
-  display: flex; /* Habilita Flexbox */
-  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea */
-  justify-content: center; /* Centra las tarjetas en la línea o las agrupa al centro */
-  gap: 20px; /* Espacio uniforme entre tarjetas (vertical y horizontal) */
-  padding-bottom: 40px; /* Espacio al final de la lista si es necesario */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 40px;
 }
 
-/* === Estilos para la clase .student-card === */
-/* Esta clase se aplicará al div contenedor de cada StudentCard_Square desde App.jsx */
-/* Controla cómo cada tarjeta se comporta como un ítem flex. */
+/* --- CONTENEDOR DE CADA TARJETA EN LA LISTA (.student-card) --- */
 .student-card {
-  flex-grow: 1; /* Permite que la tarjeta se estire para ocupar espacio sobrante en la fila */
-  flex-shrink: 1; /* Permite que la tarjeta se encoja si no hay suficiente espacio (comportamiento por defecto) */
-  
-  /* ANCHO BASE IDEAL: Ajusta este valor. Es el ancho "objetivo" de tus tarjetas. */
-  /* Con este valor, y un gap de 20px, cabrán X tarjetas por fila dependiendo del ancho de 'main'. */
-  /* Ejemplo: si main tiene 1000px de ancho, (1000 - (gaps)) / flex-basis = num tarjetas */
-  flex-basis: 270px; /* Un valor un poco menor para dar más flexibilidad con el gap */
-
-  /* ANCHO MÍNIMO: Las tarjetas no se encogerán más allá de esto. */
-  /* Cuando el espacio sea menor, 'flex-wrap' las moverá a la siguiente línea. */
-  /* Debe ser menor que flex-basis. */
-  min-width: 230px;
-
-  /* Opcional: un max-width para la tarjeta si no quieres que se estire demasiado individualmente. */
-  /* max-width: 320px; */
+  flex-grow: 0; flex-shrink: 1; flex-basis: 200; min-width: 150;
+  display: flex; justify-content: center;
 }
 
-/* === Media Queries para la Responsividad de las Tarjetas === */
-
-/* Para tablets y pantallas medianas */
-@media (max-width: 992px) { /* Ajusta este breakpoint según necesites */
-  .student-card {
-    flex-basis: 250px; /* Puedes ajustar el basis para que quepan menos tarjetas */
-    min-width: 220px;
-  }
-}
-
-/* Para móviles grandes en vertical y tablets pequeñas */
+@media (max-width: 992px) { .student-card { flex-basis: 250px; min-width: 220px; } }
 @media (max-width: 768px) {
-  main {
-    padding: 0 15px; /* Menos padding lateral en 'main' */
-  }
-  .student-list {
-    gap: 15px; /* Menor gap entre tarjetas */
-  }
-  .student-card {
-    flex-basis: 240px;
-    min-width: 200px; /* Un min-width más pequeño */
-  }
+  main { padding: 0 15px; }
+  .student-list { gap: 15px; }
+  .student-card { flex-basis: 240px; min-width: 200px; }
 }
-
-/* Para móviles en vertical */
-@media (max-width: 576px) {
-  .student-card {
-    /* Hacemos que cada tarjeta intente ocupar más espacio, tendiendo a una o dos columnas */
-    flex-basis: calc(50% - 10px); /* Intenta dos tarjetas por fila (considerando el gap de 15px/2 ~ 7.5px por lado) */
-                                   /* Si el gap es 15px, entonces (50% - 7.5px) */
-    min-width: 180px; /* Un min-width aún más pequeño */
-  }
-}
-
-/* Para móviles muy pequeños, asegurar una sola columna */
+@media (max-width: 576px) { .student-card { flex-basis: calc(50% - 10px); min-width: 180px; } }
 @media (max-width: 420px) {
-  main {
-    padding: 0 10px;
-  }
-  .student-list {
-    gap: 10px;
-  }
-  .student-card {
-    flex-basis: 100%; /* Cada tarjeta ocupa toda la fila */
-    min-width: 0; /* Permite que flex-basis: 100% funcione sin restricciones de ancho mínimo. */
-                   /* O un min-width absoluto si lo prefieres, ej: min-width: 160px; */
-  }
+  main { padding: 0 10px; }
+  .student-list { gap: 10px; }
+  .student-card { flex-basis: 100%; min-width: 0; }
 }
 
-/* === Mensajes de Estado (Error, Carga, Vacío) === */
+/* --- MENSAJES DE ESTADO --- */
 .error-message {
-  color: #c0392b;
-  padding: 20px;
-  border: 1px solid #c0392b;
-  background-color: #fdecea;
-  border-radius: 8px;
-  margin: 20px auto; /* Centra el bloque del mensaje */
-  max-width: 600px;
-  text-align: center; /* Centra el texto dentro del mensaje */
+  color: #c0392b; padding: 20px; border: 1px solid #c0392b;
+  background-color: #fdecea; border-radius: 8px; margin: 20px auto;
+  max-width: 600px; text-align: center;
 }
+main > p { font-size: 1.2em; color: #6c7a89; padding: 40px 20px; text-align: center; }
 
-/* Estilos para párrafos directos en 'main', como "Loading..." o "No students..." */
-main > p {
-  font-size: 1.2em;
-  color: #6c7a89;
-  padding: 40px 20px;
-  text-align: center; /* Centra estos mensajes de estado */
-}
-
-/* === Footer === */
+/* --- PIE DE PÁGINA --- */
 .App-footer {
   background: linear-gradient(120deg, #304a64 0%, #4a6d8c 100%);
-  color: white;
-  padding: 20px 30px; /* Espaciado interno */
-  width: 100%; /* Ocupa el ancho completo de .App */
-  box-sizing: border-box;
-  text-align: center; /* Centra el <p> del footer */
-  flex-shrink: 0; /* Evita que el footer se encoja */
+  color: white; padding: 20px 30px; width: 100%;
+  box-sizing: border-box; text-align: center; flex-shrink: 0;
+}
+.App-footer p { margin: 0; font-size: 0.9em; }
+
+/* === ESTILOS PARA LA BARRA DE FILTROS (Reajustados) === */
+/* === ESTILOS PARA LA BARRA DE FILTROS (Reajustados) === */
+.filter-bar {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  padding: 15px 10px; margin-bottom: 20px; background-color: #fff;
+  border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); gap: 15px;
 }
 
-.App-footer p {
-  margin: 0;
+.filter-group { display: flex; align-items: center; gap: 8px; padding: 5px; }
+
+.filter-button {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
+  padding: 8px; /* Padding base vertical y horizontal */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out, filter 0.1s ease, transform 0.08s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;   /* Ancho mínimo */
+  min-height: 44px;  /* Altura mínima consistente para todos los botones de filtro */
+  outline: none;
+  line-height: 1;
+  position: relative;
+  box-sizing: border-box; /* Para que padding y border no aumenten el tamaño total más allá de min-width/height si es posible */
+}
+
+.filter-button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.filter-button:hover:not(.active-filter) {
+  filter: brightness(90%);
+}
+
+.filter-button:active {
+  transform: scale(0.97);
+  filter: brightness(var(--pressed-brightness-factor, 0.85));
+}
+
+.filter-button.active-filter {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.filter-button.active-filter:hover {
+    filter: brightness(110%);
+}
+
+.filter-button.text-filter {
+  padding: 8px 15px; /* Más padding horizontal para texto */
+  font-weight: bold;
   font-size: 0.9em;
+}
+
+.reset-filter-button {
+  /* Hacemos que se parezca más a los otros botones en tamaño */
+  min-height: 44px; /* Misma altura mínima */
+  padding: 8px 18px; /* Mismo padding vertical, horizontal puede ser mayor */
+  display: inline-flex; /* Para centrar texto verticalmente */
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  background-color: #6c757d;
+  color: white;
+  border: 2px solid #6c757d; /* Borde del mismo color que el fondo para consistencia */
+  border-radius: 8px; /* Mismo borde redondeado */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Sombra un poco más sutil */
+  line-height: 1; /* Para consistencia con otros botones */
+}
+.reset-filter-button:hover {
+  background-color: #5a6268;
+  border-color: #545b62; /* Borde ligeramente más oscuro en hover */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.reset-filter-button:active {
+  transform: scale(0.97);
+  background-color: #50575c;
+  border-color: #494f54;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
 }
