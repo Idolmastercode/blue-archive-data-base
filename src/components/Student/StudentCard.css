@@ -1,40 +1,36 @@
-/* src/components/Student/StudentCard_Square.css - Diseño "Pro" Refinado v2 (con tus ajustes) */
+/* Estilos para el contenedor principal de la tarjeta de estudiante */
 .student-card-pro-container {
   margin: 12px;
   display: inline-block;
-  border-radius: 15px; /* Radio para el contorno */
+  border-radius: 15px;
   padding: 0;
   position: relative;
   transition: box-shadow 0.3s ease-out;
-  /* Borde leve permanente del color respectivo, ahora un poco más opaco */
 }
 
-/* Borde leve permanente y sombra al hover para Striker */
+/* --- Bordes y sombras dinámicas según el tipo de estudiante --- */
 .student-card-pro-container.pro-border-striker {
-  /* Un color de borde un poco más visible y menos transparente */
-  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1); /* Aumentada opacidad y grosor */
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1);
 }
 .student-card-pro-container.pro-border-striker:hover {
-  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1), /* Borde rojo más intenso y opaco */
-              0 0 22px 6px rgba(255, 77, 77, 0.5); /* Sombra/brillo rojizo un poco más extendido */
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 1),
+              0 0 22px 6px rgba(255, 77, 77, 0.5);
 }
 
-/* Borde leve permanente y sombra al hover para Special */
 .student-card-pro-container.pro-border-special {
-  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1); /* Aumentada opacidad y grosor */
+  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1);
 }
 .student-card-pro-container.pro-border-special:hover {
-  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1), /* Borde azul más intenso y opaco */
-              0 0 22px 6px rgba(77, 138, 255, 0.5); /* Sombra/brillo azulado un poco más extendido */
+  box-shadow: 0 0 0 3px rgba(77, 138, 255, 1),
+              0 0 22px 6px rgba(77, 138, 255, 0.5);
 }
 
-
-/* Tarjeta interna */
+/* Estilos para la tarjeta interna del estudiante */
 .student-card-pro {
   width: 175px;
   min-height: 235px;
   background-color: #ffffff;
-  border-radius: 15px; 
+  border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -42,22 +38,23 @@
   padding: 12px;
   text-align: center;
   cursor: pointer;
-  position: relative; /* Necesario si .avatar-unique-weapon-indicator se posicionara respecto a este, pero ahora es respecto al avatar */
+  position: relative;
   z-index: 1;
-  transition: transform 0.05s linear; 
+  transition: transform 0.05s linear;
 }
 
+/* --- Sección del Avatar del Estudiante --- */
 .student-avatar-pro-area {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  overflow: visible; /* CAMBIO: De hidden a visible para que el icono UE no se corte si se sale un poco */
+  overflow: visible; /* Permite que elementos hijos (indicador UE) se superpongan */
   background-color: #e0e6ed;
   margin-bottom: 10px;
   border: 3px solid #fff;
   box-shadow: 0 1px 6px rgba(0,0,0,0.5);
   flex-shrink: 0;
-  position: relative; /* ¡CLAVE! Para posicionar el icono del arma con respecto al avatar */
+  position: relative; /* Contexto de posicionamiento para el indicador de arma única */
 }
 
 .student-avatar-pro {
@@ -65,42 +62,40 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%; /* Para asegurar que la imagen también sea circular si es cuadrada */
+  border-radius: 50%;
 }
 
-/* --- NUEVO / AJUSTADO: Estilos para el Indicador de Arma Única en el Avatar --- */
+/* --- Indicador de Arma Única (UE) sobre el Avatar --- */
 .avatar-unique-weapon-indicator {
   position: absolute;
-  bottom: -4px;  /* Ajusta para la posición vertical (negativo para superponerse al borde del avatar) */
-  right: -4px; /* Ajusta para la posición horizontal */
-  width: 28px; /* Tamaño del círculo amarillo */
+  bottom: -4px;
+  right: -4px;
+  width: 28px;
   height: 28px;
-  background-color: #FFD700; /* Amarillo del círculo */
+  background-color: #FFD700;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid white; /* Borde blanco para separarlo del avatar */
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.4); /* Sombra para el círculo */
-  padding: 2px; 
-  box-sizing: border-box; 
-  z-index: 2; /* Para asegurar que esté encima del avatar si hay superposición */
+  border: 2px solid white;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  padding: 2px;
+  box-sizing: border-box;
+  z-index: 2; /* Asegura que esté por encima del avatar */
 }
 
-.avatar-ue-icon { /* Icono weapon_icon.png dentro del círculo amarillo */
-  width: 16px; 
+.avatar-ue-icon {
+  width: 16px;
   height: 16px;
 }
-/* --- FIN de Estilos para el Indicador de Arma Única --- */
 
-
+/* --- Sección de Información del Estudiante (Nombre, Estrellas, Tipos) --- */
 .student-info-pro-area {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
   width: 100%;
-  margin-top: auto;
+  margin-top: auto; /* Empuja esta sección hacia abajo si hay espacio extra */
 }
 
 .student-name-pro {
@@ -112,14 +107,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 150px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Tu sombra de texto */
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tu fuente */
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.25);
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .star-rating-pro {
   display: flex;
   align-items: center;
   height: 20px;
+  margin-bottom: 9px;
 }
 
 .star-icon-pro {
@@ -128,6 +124,7 @@
   margin: 0 1px;
 }
 
+/* Agrupación de etiquetas de tipo (ataque, armadura) */
 .types-tags-pro-group {
   display: flex;
   flex-direction: column;
@@ -147,7 +144,7 @@
   font-weight: bold;
   color: white;
   text-transform: uppercase;
-  min-width: 95px; 
+  min-width: 95px;
   text-align: center;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
@@ -159,8 +156,8 @@
   vertical-align: middle;
 }
 
-/* Colores para type-tag-pro */
-.attack-type-explosive, .armor-type-light { background-color: #e74c3c; }
-.attack-type-piercing, .armor-type-heavy { background-color: #f39c12; }
-.attack-type-mystic, .armor-type-special { background-color: #3498db; }
-.attack-type-sonic, .armor-type-elastic { background-color: #9b59b6; }
+/* --- Colores específicos para las etiquetas de tipo --- */
+.attack-type-explosive, .armor-type-light { background-color: #930008; }
+.attack-type-piercing, .armor-type-heavy { background-color: #bf8901; }
+.attack-type-mystic, .armor-type-special { background-color: #226f9c; }
+.attack-type-sonic, .armor-type-elastic { background-color: #794394; }

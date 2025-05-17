@@ -1,6 +1,6 @@
 [
   {
-    "id": "kasumi_gehenna",
+    "id": "kasumi",
     "name": "Kasumi",
     "pictures": {
       "avatarUrl": "images/students/avatars/kasumi.png",
@@ -89,7 +89,7 @@
     "personalNotes": "Notes specific to my Kasumi."
   },
   {
-    "id": "iroha_gehenna",
+    "id": "iroha",
     "name": "Iroha",
     "pictures": {
       "avatarUrl": "images/students/avatars/iroha.png",
@@ -131,7 +131,7 @@
     "personalNotes": "My main damage dealer for Explosive content."
   },
   {
-    "id": "hoshino_abydos",
+    "id": "hoshino",
     "name": "Hoshino",
     "pictures": {
       "avatarUrl": "images/students/avatars/hoshino.png",
@@ -140,7 +140,7 @@
     "profileData": {
       "currentStars": 5, "combatClass": "Striker", "level": 90, "bondLevel": 30,
       "role": "Tank", "position": "Front", "attackType": "Piercing", "armorType": "Heavy",
-      "school": "Abydos High School", "club": "Foreclosure Task Force", "usesCover": true, "weaponType": "SG"
+      "school": "Abydos", "club": "Foreclosure Task Force", "usesCover": true, "weaponType": "SG"
     },
     "stats": {
       "maxHp": 75000, "attack": 2800, "defense": 550, "healingPower": 0,
@@ -229,7 +229,7 @@
     "personalNotes": "Queen of AoE Explosive damage."
   },
   {
-  "id": "ako_dress_gehenna",
+  "id": "ako_dress",
   "name": "Akko (Dress)",
   "pictures": {
     "avatarUrl": "images/students/avatars/ako_dress.png",
@@ -1670,7 +1670,7 @@
     "attackType": "Sonic",
     "armorType": "Heavy",
     "school": "Trinity",
-    "club": "Make-Up Work Club",
+    "club": "Foreclosure Task Force",
     "usesCover": true,
     "weaponType": "AR"
   },
@@ -1741,5 +1741,272 @@
     }
   },
   "personalNotes": ""
-}
+},
+  {
+  "id": "hoshino_swimsuit",
+  "name": "Hoshino (Swimsuit)",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/hoshino_swimsuit.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 5,
+    "combatClass": "Striker",
+    "level": 90,
+    "bondLevel": 20,
+    "role": "Support",
+    "position": "Front",
+    "attackType": "Explosive",
+    "armorType": "Special",
+    "school": "Abydos",
+    "club": "Make-Up Work Club",
+    "usesCover": false,
+    "weaponType": "SG"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": true,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+  },
+    {
+  "id": "wakamo",
+  "name": "Wakamo",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/wakamo.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 3,
+    "combatClass": "Striker",
+    "level": 90,
+    "bondLevel": 20,
+    "role": "Dealer",
+    "position": "Back",
+    "attackType": "Mystic",
+    "armorType": "Light",
+    "school": "Hyakkiyako",
+    "club": "None",
+    "usesCover": true,
+    "weaponType": "SR"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": false,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+  },
+    {
+  "id": "momiji",
+  "name": "Momiji",
+  "pictures": {
+    "avatarUrl": "images/students/avatars/momiji.png",
+    "fullPortraitUrl": "/images/students/full/nombre_estudiante_full.png"
+  },
+  "profileData": {
+    "currentStars": 5,
+    "combatClass": "Striker",
+    "level": 90,
+    "bondLevel": 20,
+    "role": "Dealer",
+    "position": "Back",
+    "attackType": "Sonic",
+    "armorType": "Heavy",
+    "school": "Red Winter",
+    "club": "Knowledge Liberation Front",
+    "usesCover": true,
+    "weaponType": "RL"
+  },
+  "stats": {
+    "maxHp": 0,
+    "attack": 0,
+    "defense": 0,
+    "healingPower": 0,
+    "accuracy": 0,
+    "evasion": 0,
+    "critRatePoints": 0,
+    "critResistancePoints": 0,
+    "critDamagePercent": 200,
+    "critDamageResistance": 0,
+    "stabilityPoints": 0,
+    "attackRange": 0,
+    "ccPowerPoints": 0,
+    "ccResistancePoints": 0,
+    "defensePiercing": 0,
+    "ammo": {
+      "magazineSize": 0,
+      "shotsPerBurst": 0
+    },
+    "terrainAffinity": {
+      "urban": "B",
+      "outdoors": "B",
+      "indoors": "B"
+    }
+  },
+  "skills": {
+    "ex": {
+      "name": "Placeholder EX Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_ex.png",
+      "cost": 0,
+      "level": 1,
+      "description": "Placeholder EX skill description."
+    },
+    "normal": {
+      "name": "Placeholder Normal Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_normal.png",
+      "level": 1,
+      "description": "Placeholder Normal skill description."
+    },
+    "passive": {
+      "name": "Placeholder Passive Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_passive.png",
+      "level": 1,
+      "description": "Placeholder Passive skill description."
+    },
+    "sub": {
+      "name": "Placeholder Sub Skill",
+      "iconUrl": "/images/skills/nombre_estudiante_sub.png",
+      "level": 1,
+      "description": "Placeholder Sub skill description."
+    }
+  },
+  "uniqueWeapon": {
+    "hasUniqueWeapon": true,
+    "name": "",
+    "description": "",
+    "level": 0,
+    "stars": 0,
+    "imageUrl": "",
+    "skill": {
+      "name": "",
+      "description": "",
+      "iconUrl": ""
+    }
+  },
+  "personalNotes": ""
+  }
 ]

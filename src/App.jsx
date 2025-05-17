@@ -49,7 +49,7 @@ function App() {
       </main>
 
       <footer className="App-footer">
-        <p>&copy; {new Date().getFullYear()} Idolmastercode – Fan project de Blue Archive. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Idolmastercode – Blue Archive Fan Project. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
