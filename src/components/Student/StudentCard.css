@@ -48,13 +48,13 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  overflow: visible; /* Permite que elementos hijos (indicador UE) se superpongan */
-  background-color: #e0e6ed;
+  overflow: visible; /* Permite que elementos hijos (indicadores) se superpongan */
+  background-color: #e0e6ed; /* Color de fondo si la imagen no carga o tiene transparencia */
   margin-bottom: 10px;
   border: 3px solid #fff;
   box-shadow: 0 1px 6px rgba(0,0,0,0.5);
   flex-shrink: 0;
-  position: relative; /* Contexto de posicionamiento para el indicador de arma única */
+  position: relative; /* Contexto de posicionamiento para los indicadores */
 }
 
 .student-avatar-pro {
@@ -65,14 +65,12 @@
   border-radius: 50%;
 }
 
-/* --- Indicador de Arma Única (UE) sobre el Avatar --- */
-.avatar-unique-weapon-indicator {
+/* --- Indicador Base para Iconos sobre el Avatar (UE y Rol) --- */
+.avatar-indicator-base {
   position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 28px;
-  height: 28px;
-  background-color: #FFD700;
+  bottom: -5px; /* Ajustado ligeramente para mejor posicionamiento con nuevo tamaño */
+  width: 30px;   /* Aumentado ligeramente */
+  height: 30px;  /* Aumentado ligeramente */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -84,10 +82,34 @@
   z-index: 2; /* Asegura que esté por encima del avatar */
 }
 
-.avatar-ue-icon {
-  width: 16px;
-  height: 16px;
+.avatar-role-icon-image { /* Para la imagen del icono de ROL */
+  width: 17.5px;  /* Tamaño actual, ajústalo si es necesario */
+  height: 17.5px;
+  object-fit: contain; /* Asegura que toda la imagen se vea */
 }
+
+.avatar-ue-icon-image { /* Para la imagen del icono de ARMA ÚNICA */
+  width: 20px;  /* Ligeramente más grande para compensar transparencia, ajústalo */
+  height: 20px;
+  object-fit: contain; /* Asegura que toda la imagen se vea */
+}
+
+/* Indicador de Arma Única (UE) específico */
+.avatar-unique-weapon-indicator {
+  /* Hereda de .avatar-indicator-base */
+  right: -5px; /* Ajustado ligeramente para simetría y nuevo tamaño */
+  background-color: #ffcb02; /* Amarillo dorado característico */
+}
+
+/* Indicador de Rol del Estudiante específico */
+.avatar-role-indicator {
+  /* Hereda de .avatar-indicator-base */
+  left: -5px; /* Posicionamiento en el lado izquierdo, simétrico */
+  background-color: #dddddd; /* Gris claro, como solicitaste */
+  /* Podrías usar un gris más específico de Blue Archive si lo tienes */
+  /* background-color: #e0e6ed;  Un gris azulado claro */
+}
+
 
 /* --- Sección de Información del Estudiante (Nombre, Estrellas, Tipos) --- */
 .student-info-pro-area {
