@@ -6,7 +6,7 @@ import './App.css';
 const GENERIC_ATTACK_ICON_URL = 'images/icons/attack_icon.jpg';
 const GENERIC_ARMOR_ICON_URL = 'images/icons/armor_icon.jpg';
 
-// --- Definición de Temas de Color (Usando TUS últimos valores) ---
+// --- Definición de Temas de Color (Usando TUS últimos valores de Turno 29) ---
 const typeRedTheme = {
   baseBgColor: 'rgba(148, 5, 13, 0.5)', baseBorderColor: 'rgba(148, 5, 13, 0.25)',
   activeBgColor: 'rgba(148, 5, 13, 1)', activeBorderColor: 'rgba(108, 0, 6, 1)',
@@ -32,24 +32,24 @@ const typePurpleTheme = {
   pressedBrightnessFactor: 0.85
 };
 const strikerTheme = {
-  baseBgColor: 'rgba(255, 255, 255, 1)', baseBorderColor: 'rgba(239, 80, 49, 1)',
-  baseIconOrTextColor: 'rgba(239, 80, 49, 1)',
+  baseBgColor: 'rgba(255, 255, 255, 1)', baseBorderColor: 'rgba(239, 80, 49, 0.5)',
+  baseIconOrTextColor: 'rgba(239, 80, 49, 0.5)',
   activeBgColor: 'rgba(239, 80, 49, 1)', activeBorderColor: 'rgba(231, 53, 18, 1)',
   activeIconOrTextColor: 'white',
   pressedBrightnessFactor: 0.85
 };
 const specialClassTheme = {
-  baseBgColor: 'rgba(255, 255, 255, 1)', baseBorderColor: 'rgba(7, 133, 251, 1)',
-  baseIconOrTextColor: 'rgba(7, 133, 251, 1)',
+  baseBgColor: 'rgba(255, 255, 255, 0.5)', baseBorderColor: 'rgba(7, 133, 251, 0.5)',
+  baseIconOrTextColor: 'rgba(7, 133, 251, 0.5)',
   activeBgColor: 'rgba(7, 133, 251, 1)', activeBorderColor: 'rgba(3, 113, 215, 1)',
   activeIconOrTextColor: 'white',
   pressedBrightnessFactor: 0.85
 };
 const roleTheme = {
-  baseBgColor: 'rgba(119, 119, 119, 0.25)', baseBorderColor: 'rgba(119, 119, 119, 1)',
-  baseIconOrTextColor: 'rgba(70, 70, 70, 1)',
+  baseBgColor: 'rgba(119, 119, 119, 0.25)', baseBorderColor: 'rgba(119, 119, 119, 0.25)',
+  baseIconOrTextColor: 'rgba(70, 70, 70, 1)', // Color del icono de rol en estado base (original)
   activeBgColor: 'rgba(119, 119, 119, 1)', activeBorderColor: 'rgba(99, 99, 99, 1)',
-  activeIconOrTextColor: 'white',
+  activeIconOrTextColor: 'white', // Instrucción para que el icono se vuelva blanco
   pressedBrightnessFactor: 0.85
 };
 
@@ -68,7 +68,7 @@ const armorTypeOptions = [
 ];
 const combatClassOptions = [
   { value: 'Striker', label: 'Striker', theme: strikerTheme },
-  { value: 'Special', label: 'Special (Clase)', theme: specialClassTheme }
+  { value: 'Special', label: 'Special', theme: specialClassTheme }
 ];
 const roleOptions = [
   { value: 'Dealer',  icon: 'images/roles/dealer_icon.png',  label: 'Dealer', theme: roleTheme },
@@ -144,7 +144,8 @@ function App() {
     setActiveFilters({ attackType: [], armorType: [], combatClass: [], role: [] });
   };
 
-  const getButtonStyles = (option, isActive) => {
+  // --- Función getButtonStyles (AJUSTADA para fusionar comportamientos de iconos de Rol) ---
+  const getButtonStyles = (option, isActive, groupType) => {
     const styles = {};
     const theme = option.theme;
 
@@ -152,20 +153,29 @@ function App() {
         ? theme.pressedBrightnessFactor 
         : 0.85; 
 
-    let iconFilterForCurrentState = 'none'; 
+    let iconFilterForCurrentState = 'none'; // Por defecto, ningún filtro.
 
-    if (isActive) {
+    if (groupType === 'role') { // Lógica específica para iconos de ROL
+      if (isActive) {
+        // Activo: Opacidad completa Y se intenta hacer blanco si el tema lo indica
+        iconFilterForCurrentState = 'opacity(1)'; // Primero asegura opacidad completa
         if (theme && theme.activeIconOrTextColor === 'white') {
-            // --- "BLANQUEADOR AGRESIVO" ACTIVADO ---
-            // Este filtro es más robusto para intentar obtener un blanco puro
-            iconFilterForCurrentState = 'grayscale(100%) brightness(0) invert(100%)'; 
+          // Combina opacidad con el filtro para blanco
+          iconFilterForCurrentState = 'opacity(1) grayscale(100%) brightness(0) invert(100%)';
         }
+      } else {
+        // Base: Tenue al 50%
+        iconFilterForCurrentState = 'opacity(0.5)';
+      }
+    } else if (option.icon === GENERIC_ATTACK_ICON_URL || option.icon === GENERIC_ARMOR_ICON_URL) {
+      // Iconos genéricos de espada/escudo: siempre sin filtro (color natural)
+      iconFilterForCurrentState = 'none';
     }
-    // Para el estado base (NO activo), iconFilterForCurrentState permanece 'none'.
-    // Los iconos (espada, escudo, roles) se mostrarán en su color natural.
+    // Nota: Si hubiera otros tipos de iconos con temas, podrías añadir más 'else if' aquí.
 
     styles['--icon-filter-style'] = iconFilterForCurrentState;
 
+    // Aplicar colores de fondo, borde y texto del botón
     if (theme) {
       if (isActive) {
         styles.backgroundColor = theme.activeBgColor;
@@ -184,8 +194,11 @@ function App() {
         styles.backgroundColor = roleTheme.activeBgColor; 
         styles.borderColor = roleTheme.activeBorderColor;
         styles.color = roleTheme.activeIconOrTextColor;
-        if (roleTheme.activeIconOrTextColor === 'white') {
-            styles['--icon-filter-style'] = 'grayscale(100%) brightness(0) invert(100%)'; // También usa el agresivo aquí
+        // Para el caso fallback, si el icono debe ser blanco y es un rol (o tipo no especificado)
+        if (roleTheme.activeIconOrTextColor === 'white' && groupType === 'role') { 
+             styles['--icon-filter-style'] = 'opacity(1) grayscale(100%) brightness(0) invert(100%)';
+        } else if (groupType === 'role') { // Asegurar opacidad para roles activos sin tema específico
+             styles['--icon-filter-style'] = 'opacity(1)';
         }
       }
     }
@@ -207,7 +220,7 @@ function App() {
             <div className="filter-group" key={group.type} aria-label={`Filtros para ${group.label || group.type}`}>
               {group.options.map(opt => {
                 const isActive = activeFilters[group.type].includes(opt.value);
-                const buttonStyle = getButtonStyles(opt, isActive);
+                const buttonStyle = getButtonStyles(opt, isActive, group.type); // Pasar group.type
                 return (
                   <button
                     key={opt.value}
@@ -223,7 +236,7 @@ function App() {
               })}
             </div>
           ))}
-          <button onClick={resetFilters} className="reset-filter-button">Resetear Filtros</button>
+          <button onClick={resetFilters} className="reset-filter-button">Reset All</button>
         </div>
       )}
 
