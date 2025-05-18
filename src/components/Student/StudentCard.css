@@ -14,7 +14,7 @@
 }
 .student-card-pro-container.pro-border-striker:hover {
   box-shadow: 0 0 0 3px rgba(239, 80, 49, 0.75),
-              0 0 22px 6px rgba(231, 53, 18, 0.75);
+              0 0 20px 3px rgba(231, 53, 18, 0.75);
 }
 
 .student-card-pro-container.pro-border-special {
@@ -22,7 +22,7 @@
 }
 .student-card-pro-container.pro-border-special:hover {
   box-shadow: 0 0 0 3px rgba(7, 133, 251, 0.75),
-              0 0 22px 6px rgba(3, 113, 215, 0.75);
+              0 0 20px 3px rgba(3, 113, 215, 0.75);
 }
 
 /* --- ESTILOS DE LA TARJETA INTERNA --- */

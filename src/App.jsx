@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import StudentCard from './components/student/StudentCard';
 import './App.css';
 
-// --- Iconos Genéricos ---
+// --- Iconos Genéricos (¡REEMPLAZA ESTAS RUTAS!) ---
 const GENERIC_ATTACK_ICON_URL = 'images/icons/attack_icon.jpg';
 const GENERIC_ARMOR_ICON_URL = 'images/icons/armor_icon.jpg';
 
-// --- Definición de Temas de Color (Usando TUS últimos valores de Turno 29) ---
+// --- Definiciones de Temas de Color para Botones ---
 const typeRedTheme = {
   baseBgColor: 'rgba(148, 5, 13, 0.5)', baseBorderColor: 'rgba(148, 5, 13, 0.25)',
   activeBgColor: 'rgba(148, 5, 13, 1)', activeBorderColor: 'rgba(108, 0, 6, 1)',
@@ -47,13 +47,13 @@ const specialClassTheme = {
 };
 const roleTheme = {
   baseBgColor: 'rgba(119, 119, 119, 0.25)', baseBorderColor: 'rgba(119, 119, 119, 0.25)',
-  baseIconOrTextColor: 'rgba(70, 70, 70, 1)', // Color del icono de rol en estado base (original)
+  baseIconOrTextColor: 'rgba(70, 70, 70, 1)',
   activeBgColor: 'rgba(119, 119, 119, 1)', activeBorderColor: 'rgba(99, 99, 99, 1)',
-  activeIconOrTextColor: 'white', // Instrucción para que el icono se vuelva blanco
+  activeIconOrTextColor: 'white',
   pressedBrightnessFactor: 0.85
 };
 
-// --- Opciones para Filtros ---
+// --- Configuración de Opciones para Filtros ---
 const attackTypeOptions = [
   { value: 'Explosive', icon: GENERIC_ATTACK_ICON_URL, label: 'Explosivo', theme: typeRedTheme },
   { value: 'Piercing',  icon: GENERIC_ATTACK_ICON_URL, label: 'Penetrante', theme: typeYellowTheme },
@@ -78,7 +78,9 @@ const roleOptions = [
   { value: 'T.S.',    icon: 'images/roles/ts_icon.png',      label: 'T.S.', theme: roleTheme }
 ];
 
+// --- Componente Principal App ---
 function App() {
+  // --- Estados del Componente ---
   const [sourceStudents, setSourceStudents] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -87,6 +89,7 @@ function App() {
     attackType: [], armorType: [], combatClass: [], role: []
   });
 
+  // --- Efecto para Carga Inicial de Datos y Ordenamiento ---
   useEffect(() => {
     const fetchStudents = async () => {
       try {
@@ -106,6 +109,7 @@ function App() {
     fetchStudents();
   }, []);
 
+  // --- Efecto para Aplicar Filtros Cuando Cambian ---
   useEffect(() => {
     if (loading) return;
     let studentsToFilter = [...sourceStudents];
@@ -130,6 +134,7 @@ function App() {
     setFilteredStudents(studentsToFilter);
   }, [activeFilters, sourceStudents, loading]);
 
+  // --- Manejadores de Eventos para Filtros ---
   const handleFilterChange = (filterType, value) => {
     setActiveFilters(prevFilters => {
       const currentValues = prevFilters[filterType];
@@ -144,7 +149,7 @@ function App() {
     setActiveFilters({ attackType: [], armorType: [], combatClass: [], role: [] });
   };
 
-  // --- Función getButtonStyles (AJUSTADA para fusionar comportamientos de iconos de Rol) ---
+  // --- Lógica de Estilo para Botones de Filtro ---
   const getButtonStyles = (option, isActive, groupType) => {
     const styles = {};
     const theme = option.theme;
@@ -153,29 +158,28 @@ function App() {
         ? theme.pressedBrightnessFactor 
         : 0.85; 
 
-    let iconFilterForCurrentState = 'none'; // Por defecto, ningún filtro.
+    let iconFilterForCurrentState = 'none'; 
 
-    if (groupType === 'role') { // Lógica específica para iconos de ROL
+    if (groupType === 'role') {
       if (isActive) {
-        // Activo: Opacidad completa Y se intenta hacer blanco si el tema lo indica
-        iconFilterForCurrentState = 'opacity(1)'; // Primero asegura opacidad completa
+        iconFilterForCurrentState = 'opacity(1)';
         if (theme && theme.activeIconOrTextColor === 'white') {
-          // Combina opacidad con el filtro para blanco
           iconFilterForCurrentState = 'opacity(1) grayscale(100%) brightness(0) invert(100%)';
         }
       } else {
-        // Base: Tenue al 50%
         iconFilterForCurrentState = 'opacity(0.5)';
       }
     } else if (option.icon === GENERIC_ATTACK_ICON_URL || option.icon === GENERIC_ARMOR_ICON_URL) {
-      // Iconos genéricos de espada/escudo: siempre sin filtro (color natural)
-      iconFilterForCurrentState = 'none';
+      // Iconos genéricos de espada/escudo: color natural (blanco), se hacen blancos si el tema activo lo pide (ya lo hacen sus temas)
+      if (isActive && theme && theme.activeIconOrTextColor === 'white') {
+        iconFilterForCurrentState = 'brightness(0) invert(1)';
+      } else {
+        iconFilterForCurrentState = 'none'; // Color natural (blanco/gris claro del PNG)
+      }
     }
-    // Nota: Si hubiera otros tipos de iconos con temas, podrías añadir más 'else if' aquí.
-
+    
     styles['--icon-filter-style'] = iconFilterForCurrentState;
 
-    // Aplicar colores de fondo, borde y texto del botón
     if (theme) {
       if (isActive) {
         styles.backgroundColor = theme.activeBgColor;
@@ -194,10 +198,9 @@ function App() {
         styles.backgroundColor = roleTheme.activeBgColor; 
         styles.borderColor = roleTheme.activeBorderColor;
         styles.color = roleTheme.activeIconOrTextColor;
-        // Para el caso fallback, si el icono debe ser blanco y es un rol (o tipo no especificado)
         if (roleTheme.activeIconOrTextColor === 'white' && groupType === 'role') { 
              styles['--icon-filter-style'] = 'opacity(1) grayscale(100%) brightness(0) invert(100%)';
-        } else if (groupType === 'role') { // Asegurar opacidad para roles activos sin tema específico
+        } else if (groupType === 'role') { 
              styles['--icon-filter-style'] = 'opacity(1)';
         }
       }
@@ -205,6 +208,7 @@ function App() {
     return styles;
   };
 
+  // --- Estructura de la Interfaz de Usuario (UI) ---
   return (
     <div className="App">
       <header className="App-header"><h1>Mis estudiantes consentidas</h1></header>
@@ -220,7 +224,7 @@ function App() {
             <div className="filter-group" key={group.type} aria-label={`Filtros para ${group.label || group.type}`}>
               {group.options.map(opt => {
                 const isActive = activeFilters[group.type].includes(opt.value);
-                const buttonStyle = getButtonStyles(opt, isActive, group.type); // Pasar group.type
+                const buttonStyle = getButtonStyles(opt, isActive, group.type);
                 return (
                   <button
                     key={opt.value}
@@ -256,7 +260,7 @@ function App() {
       </main>
 
       <footer className="App-footer">
-        <p>&copy; {new Date().getFullYear()} Idolmastercode – Blue Archive Fan Project.</p>
+        <p>&copy; {new Date().getFullYear()} Idolmastercode – Blue Archive Fan Project. All rights reserved.</p>
       </footer>
     </div>
   );

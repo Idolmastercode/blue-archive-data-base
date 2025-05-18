@@ -1,209 +1,202 @@
-/* --- ESTILOS BASE Y DEL CUERPO DE LA PÁGINA --- */
-body {
-  margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #e9eef2;
-  color: #333a45;
-  line-height: 1.6;
-}
+  /* --- ESTILOS BASE Y DEL CUERPO DE LA PÁGINA --- */
+  body {
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e9eef2;
+    color: #333a45;
+    line-height: 1.6;
+  }
 
-/* --- CONTENEDOR PRINCIPAL DE LA APLICACIÓN (.App) --- */
-.App {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
+  /* --- CONTENEDOR PRINCIPAL DE LA APLICACIÓN (.App) --- */
+  .App {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* --- ENCABEZADO DE LA APLICACIÓN (.App-header) --- */
-.App-header {
-  background: linear-gradient(120deg, #4a6d8c 0%, #304a64 100%);
-  color: white;
-  padding: 20px 30px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
-}
+  /* --- ENCABEZADO DE LA APLICACIÓN (.App-header) --- */
+  .App-header {
+    background: linear-gradient(120deg, #4a6d8c 0%, #304a64 100%);
+    color: white;
+    padding: 20px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+  }
 
-.App-header h1 {
-  margin: 0;
-  font-size: 1.8em;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
-}
+  .App-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  }
 
-/* --- ÁREA DE CONTENIDO PRINCIPAL (main) --- */
-main {
-  width: 100%;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  flex-grow: 1;
-}
+  /* --- ÁREA DE CONTENIDO PRINCIPAL (main) --- */
+  main {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
 
-@media (min-width: 1700px) { main { max-width: 1600px; } }
-@media (min-width: 2000px) { main { max-width: 90%; } }
+  @media (min-width: 1700px) { main { max-width: 1600px; } }
+  @media (min-width: 2000px) { main { max-width: 90%; } }
 
-/* --- LISTA DE ESTUDIANTES (.student-list) --- */
-.student-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* O space-between / space-around si lo cambiaste */
-  gap: 20px; /* O el valor que estés usando */
-  padding-bottom: 40px;
-}
+  /* --- LISTA DE ESTUDIANTES (.student-list) --- */
+  .student-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
 
-/* --- CONTENEDOR DE CADA TARJETA EN LA LISTA (.student-card) --- */
-.student-card {
-  flex-grow: 0; 
-  flex-shrink: 1; 
-  /* flex-basis: calc(20% - 12px); */ /* Ejemplo si usas calc para 5 tarjetas */
-  flex-basis: 270px; /* O el valor que te funcione para la distribución */
-  min-width: 230px;
-  display: flex; 
-  justify-content: center;
-}
+  /* --- CONTENEDOR DE CADA TARJETA EN LA LISTA (.student-card) --- */
+  .student-card {
+    flex-grow: 0; 
+    flex-shrink: 1; 
+    flex-basis: 200px; 
+    min-width: 300;
+    display: flex; 
+    justify-content: center;
+  }
 
-@media (max-width: 992px) { .student-card { flex-basis: 250px; min-width: 220px; } }
-@media (max-width: 768px) {
-  main { padding: 0 15px; }
-  .student-list { gap: 15px; }
-  .student-card { flex-basis: 240px; min-width: 200px; }
-}
-@media (max-width: 576px) { .student-card { flex-basis: calc(50% - 10px); min-width: 180px; } }
-@media (max-width: 420px) {
-  main { padding: 0 10px; }
-  .student-list { gap: 10px; }
-  .student-card { flex-basis: 100%; min-width: 0; }
-}
+  /* --- Media Queries para Responsividad de Tarjetas --- */
+  @media (max-width: 992px) { .student-card { flex-basis: 250px; min-width: 220px; } }
+  @media (max-width: 768px) {
+    main { padding: 0 15px; }
+    .student-list { gap: 15px; }
+    .student-card { flex-basis: 240px; min-width: 200px; }
+  }
+  @media (max-width: 576px) { .student-card { flex-basis: calc(50% - 10px); min-width: 180px; } }
+  @media (max-width: 420px) {
+    main { padding: 0 10px; }
+    .student-list { gap: 10px; }
+    .student-card { flex-basis: 100%; min-width: 0; }
+  }
 
-/* --- MENSAJES DE ESTADO --- */
-.error-message {
-  color: #c0392b; padding: 20px; border: 1px solid #c0392b;
-  background-color: #fdecea; border-radius: 8px; margin: 20px auto;
-  max-width: 600px; text-align: center;
-}
-main > p { font-size: 1.2em; color: #6c7a89; padding: 40px 20px; text-align: center; }
+  /* --- MENSAJES DE ESTADO --- */
+  .error-message {
+    color: #c0392b; padding: 20px; border: 1px solid #c0392b;
+    background-color: #fdecea; border-radius: 8px; margin: 20px auto;
+    max-width: 600px; text-align: center;
+  }
+  main > p { font-size: 1.2em; color: #6c7a89; padding: 40px 20px; text-align: center; }
 
-/* --- PIE DE PÁGINA --- */
-.App-footer {
-  background: linear-gradient(120deg, #304a64 0%, #4a6d8c 100%);
-  color: white; padding: 20px 30px; width: 100%;
-  box-sizing: border-box; text-align: center; flex-shrink: 0;
-}
-.App-footer p { margin: 0; font-size: 0.9em; }
+  /* --- PIE DE PÁGINA --- */
+  .App-footer {
+    background: linear-gradient(120deg, #304a64 0%, #4a6d8c 100%);
+    color: white; padding: 20px 30px; width: 100%;
+    box-sizing: border-box; text-align: center; flex-shrink: 0;
+  }
+  .App-footer p { margin: 0; font-size: 0.9em; }
 
-/* === ESTILOS PARA LA BARRA DE FILTROS (Hover Mejorado) === */
-.filter-bar {
-  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  padding: 15px 10px; margin-bottom: 10px; background-color: #fff;
-  border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); gap: 15px;
-}
+  /* --- BARRA DE FILTROS --- */
+  .filter-bar {
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    padding: 15px 10px; margin-bottom: 10px; background-color: #fff;
+    border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); gap: 15px;
+  }
 
-.filter-group { display: flex; align-items: center; gap: 8px; padding: 5px; }
+  .filter-group { display: flex; align-items: center; gap: 8px; padding: 5px; }
 
-.filter-button {
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 8px;
-  padding: 8px;
-  cursor: pointer;
-  /* Ajustada la transición para incluir box-shadow */
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, 
-              color 0.2s ease-in-out, filter 0.1s ease, 
-              transform 0.08s ease-out, box-shadow 0.2s ease-in-out;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
-  outline: none;
-  line-height: 1;
-  position: relative;
-  box-sizing: border-box; 
-}
+  /* --- Botones de Filtro Individuales --- */
+  .filter-button {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, 
+                color 0.2s ease-in-out, filter 0.1s ease, 
+                transform 0.08s ease-out, box-shadow 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    outline: none;
+    line-height: 1;
+    position: relative;
+    box-sizing: border-box; 
+  }
 
-.filter-button img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  display: block;
-  pointer-events: none;
-}
+  .filter-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+  }
 
-/* Hover para botones NO activos: AÑADIMOS BOX-SHADOW */
-.filter-button:hover:not(.active-filter) {
-  filter: brightness(92%); /* Mantenemos un ligero cambio de brillo */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Sombra sutil al pasar el cursor */
-  /* transform: translateY(-1px); */ /* Opcional: ligero levantamiento */
-}
+  .filter-button:hover:not(.active-filter) {
+    filter: brightness(92%); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
+  }
 
-/* Efecto de PRESION al hacer clic (mouse down) */
-.filter-button:active {
-  transform: scale(0.97) !important; /* Se mantiene el encogimiento sutil */
-  filter: brightness(var(--pressed-brightness-factor, 0.85)) !important; /* Oscurecimiento temático */
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset !important; /* Sombra interior para efecto presionado */
-}
+  .filter-button:active {
+    transform: scale(0.97) !important; 
+    filter: brightness(var(--pressed-brightness-factor, 0.85)) !important; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset !important; 
+  }
 
-/* Estilo para cuando el botón está SELECCIONADO (activo) */
-.filter-button.active-filter {
-  /* Los colores base (fondo, borde, texto) son aplicados por el style inline desde JS */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.20); /* Sombra base sutil para botones activos */
-  /* No hay cambios de tamaño ni de grosor de borde aquí */
-}
+  .filter-button.active-filter {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.20); 
+  }
 
-/* Hover para botones YA ACTIVOS: AÑADIMOS/MEJORAMOS BOX-SHADOW */
-.filter-button.active-filter:hover {
-  filter: brightness(105%); /* Un poco más brillante */
-  box-shadow: 0 3px 7px rgba(0,0,0,0.22); /* Sombra un poco más pronunciada al pasar el cursor */
-  /* transform: translateY(-1px); */ /* Opcional: ligero levantamiento también para activos */
-}
+  .filter-button.active-filter:hover {
+    filter: brightness(105%); 
+    box-shadow: 0 3px 7px rgba(0,0,0,0.22); 
+  }
 
-.filter-button.text-filter {
-  padding: 8px 15px;
-  font-weight: bold;
-  font-size: 0.9em;
-}
+  .filter-button.text-filter {
+    padding: 8px 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
 
-.reset-filter-button {
-  margin-left: 5px;
-  margin-right: 5px;
-  min-height: 44px; 
-  padding: 8px 20px; 
-  display: inline-flex; 
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-color: #6c757d;
-  color: white;
-  border: 2px solid #6c757d;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  outline: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-}
-.reset-filter-button:hover {
-  background-color: #5a6268;
-  border-color: #545b62; 
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-.reset-filter-button:active {
-  transform: scale(0.97);
-  background-color: #50575c;
-  border-color: #494f54;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
-}
+  /* --- Botón de Resetear Filtros --- */
+  .reset-filter-button {
+    margin-left: 5px; /* Tu ajuste de margen */
+    margin-right: 5px; /* Tu ajuste de margen */
+    min-height: 44px; 
+    padding: 8px 20px; /* Tu ajuste de padding */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #6c757d;
+    color: white;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .reset-filter-button:hover {
+    background-color: #5a6268;
+    border-color: #545b62; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  .reset-filter-button:active {
+    transform: scale(0.97);
+    background-color: #50575c;
+    border-color: #494f54;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
+  }
