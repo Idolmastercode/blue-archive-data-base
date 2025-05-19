@@ -2008,5 +2008,1073 @@
     }
   },
   "personalNotes": ""
+  },
+    {
+    "id": "natsu",
+    "name": "Natsu",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/natsu.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 4,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 20,
+      "role": "Tank",
+      "position": "Front",
+      "attackType": "Mystic",
+      "armorType": "Heavy",
+      "school": "Trinity",
+      "club": "After-School Sweets Club",
+      "usesCover": false, 
+      "weaponType": "SMG" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "miyu",
+    "name": "Miyu",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/miyu.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 4,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 27,
+      "role": "Support",
+      "position": "Back",
+      "attackType": "Piercing",
+      "armorType": "Light",
+      "school": "SRT",
+      "club": "RABBIT Squad",
+      "usesCover": true, 
+      "weaponType": "SR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "koharu",
+    "name": "Koharu",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/koharu.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 4,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 18,
+      "role": "Healer",
+      "position": "Back",
+      "attackType": "Explosive",
+      "armorType": "Heavy",
+      "school": "Trinity",
+      "club": "Make-Up Work Club",
+      "usesCover": true, 
+      "weaponType": "SR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "kikyou",
+    "name": "Kikyou",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/kikyou.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 4,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 17,
+      "role": "Support",
+      "position": "Back",
+      "attackType": "Sonic",
+      "armorType": "Heavy",
+      "school": "Hyakkiyako",
+      "club": "Hyakkaryouran Resolution Council",
+      "usesCover": true, 
+      "weaponType": "SG" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "hibiki_cheer_squad",
+    "name": "Hibiki (Cheer Squad)",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/hibiki_cheer_squad.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 4,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 16,
+      "role": "Dealer",
+      "position": "Back",
+      "attackType": "Explosive",
+      "armorType": "Light",
+      "school": "Millennium",
+      "club": "Engineering Department",
+      "usesCover": false, 
+      "weaponType": "MT" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "miyu_swimsuit",
+    "name": "Miyu (Swimsuit)",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/miyu_swimsuit.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 4,
+      "combatClass": "Special",
+      "level": 90,
+      "bondLevel": 14,
+      "role": "Dealer",
+      "position": "Back",
+      "attackType": "Explosive",
+      "armorType": "Light",
+      "school": "SRT",
+      "club": "RABBIT Squad",
+      "usesCover": false, 
+      "weaponType": "SR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "shiroko_swimsuit",
+    "name": "Shiroko (Swimsuit)",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/shiroko_swimsuit.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 3,
+      "combatClass": "Special",
+      "level": 90,
+      "bondLevel": 20,
+      "role": "Dealer",
+      "position": "Back",
+      "attackType": "Mystic",
+      "armorType": "Light",
+      "school": "Abydos",
+      "club": "Foreclosure Task Force",
+      "usesCover": false, 
+      "weaponType": "AR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "hare_camp",
+    "name": "Hare (Camp)",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/hare_camp.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 3,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 20,
+      "role": "Support",
+      "position": "Middle",
+      "attackType": "Explosive",
+      "armorType": "Light",
+      "school": "Millennium",
+      "club": "Veritas",
+      "usesCover": true, 
+      "weaponType": "AR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "atsuko",
+    "name": "Atsuko (Swimsuit)",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/atsuko_swimsuit.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 3,
+      "combatClass": "Special",
+      "level": 90,
+      "bondLevel": 9,
+      "role": "Healer",
+      "position": "Back",
+      "attackType": "Sonic",
+      "armorType": "Special",
+      "school": "Arius",
+      "club": "Arius Squad",
+      "usesCover": false, 
+      "weaponType": "SMG" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "chiaki",
+    "name": "Chiaki",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/chiaki.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 3,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 20,
+      "role": "Dealer",
+      "position": "Middle",
+      "attackType": "Sonic",
+      "armorType": "Special",
+      "school": "Gehenna",
+      "club": "Pandemonium Society",
+      "usesCover": true, 
+      "weaponType": "AR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "makoto",
+    "name": "Makoto",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/makoto.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 3,
+      "combatClass": "Special",
+      "level": 90,
+      "bondLevel": 20,
+      "role": "Dealer",
+      "position": "Back",
+      "attackType": "Piercing",
+      "armorType": "Special",
+      "school": "Gehenna",
+      "club": "Pandemonium Society",
+      "usesCover": false, 
+      "weaponType": "SR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
+  },
+    {
+    "id": "renge",
+    "name": "Renge",
+    "pictures": {
+      "avatarUrl": "images/students/avatars/renge.png",
+      "fullPortraitUrl": "/images/students/full/kasumi_full.png"
+    },
+    "profileData": {
+      "currentStars": 3,
+      "combatClass": "Striker",
+      "level": 90,
+      "bondLevel": 20,
+      "role": "Dealer",
+      "position": "Back",
+      "attackType": "Sonic",
+      "armorType": "Heavy",
+      "school": "Hyakkiyako",
+      "club": "Hyakkaryouran Resolution Council",
+      "usesCover": true, 
+      "weaponType": "SR" 
+    },
+    "stats": {
+      "maxHp": 47108,
+      "attack": 4641,
+      "defense": 104,
+      "healingPower": 0, 
+      "accuracy": 750, 
+      "evasion": 200,
+      "critRatePoints": 1238,
+      "critResistancePoints": 100,
+      "critDamagePercent": 200, 
+      "critDamageResistance": 50,
+      "stabilityPoints": 1500,
+      "attackRange": 720, 
+      "ccPowerPoints": 0,
+      "ccResistancePoints": 100,
+      "defensePiercing": 0,
+      "ammo": {
+        "magazineSize": 100, 
+        "shotsPerBurst": 1
+      },
+      "terrainAffinity": {
+        "urban": "S",
+        "outdoors": "B",
+        "indoors": "D"
+      }
+    },
+    "skills": {
+      "ex": {
+        "name": "Kasumi's EX Skill",
+        "iconUrl": "/images/skills/kasumi_ex.png",
+        "cost": 5,
+        "level": 5,
+        "description": "Detailed description of Kasumi's EX skill effects at level 5."
+      },
+      "normal": {
+        "name": "Kasumi's Normal Skill",
+        "iconUrl": "/images/skills/kasumi_normal.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Normal skill effects at level 10."
+      },
+      "passive": {
+        "name": "Kasumi's Passive Skill",
+        "iconUrl": "/images/skills/kasumi_passive.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Passive skill effects at level 10."
+      },
+      "sub": {
+        "name": "Kasumi's Sub Skill",
+        "iconUrl": "/images/skills/kasumi_sub.png",
+        "level": 10,
+        "description": "Detailed description of Kasumi's Sub skill effects at level 10."
+      }
+    },
+    "uniqueWeapon": {
+      "hasUniqueWeapon": false,
+      "name": "Kasumi's Unique Weapon",
+      "description": "Description of Kasumi's unique weapon.",
+      "level": 40,
+      "stars": 2,
+      "imageUrl": "/images/ue/kasumi_ue.png",
+      "skill": {
+        "name": "Kasumi's Passive Skill+",
+        "description": "Enhanced effects of the passive skill due to the unique weapon.",
+        "iconUrl": "/images/skills/kasumi_passive_ue.png"
+      }
+    },
+    "personalNotes": "Notes specific to my Kasumi."
   }
 ]
