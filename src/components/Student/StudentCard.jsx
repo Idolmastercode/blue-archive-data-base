@@ -92,7 +92,7 @@ function StudentCard({ student }) {
     <div
       className={cardContainerClass}
       onClick={handleCardClick}
-      title={`Ver detalles de ${name} - Rol: ${cleanRole}`}
+      title={`Ver detalles de ${name}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={cardRef}

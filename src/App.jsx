@@ -55,16 +55,16 @@ const roleTheme = {
 
 // --- Configuración de Opciones para Filtros ---
 const attackTypeOptions = [
-  { value: 'Explosive', icon: GENERIC_ATTACK_ICON_URL, label: 'Explosivo', theme: typeRedTheme },
-  { value: 'Piercing',  icon: GENERIC_ATTACK_ICON_URL, label: 'Penetrante', theme: typeYellowTheme },
-  { value: 'Mystic',    icon: GENERIC_ATTACK_ICON_URL, label: 'Místico', theme: typeBlueTheme },
-  { value: 'Sonic',     icon: GENERIC_ATTACK_ICON_URL, label: 'Sónico', theme: typePurpleTheme }
+  { value: 'Explosive', icon: GENERIC_ATTACK_ICON_URL, label: 'Explosive', theme: typeRedTheme },
+  { value: 'Piercing',  icon: GENERIC_ATTACK_ICON_URL, label: 'Piercing', theme: typeYellowTheme },
+  { value: 'Mystic',    icon: GENERIC_ATTACK_ICON_URL, label: 'Mystic', theme: typeBlueTheme },
+  { value: 'Sonic',     icon: GENERIC_ATTACK_ICON_URL, label: 'Sonic', theme: typePurpleTheme }
 ];
 const armorTypeOptions = [
-  { value: 'Light',   icon: GENERIC_ARMOR_ICON_URL, label: 'Ligero', theme: typeRedTheme },
-  { value: 'Heavy',   icon: GENERIC_ARMOR_ICON_URL, label: 'Pesado', theme: typeYellowTheme },
-  { value: 'Special', icon: GENERIC_ARMOR_ICON_URL, label: 'Especial (Armadura)', theme: typeBlueTheme },
-  { value: 'Elastic', icon: GENERIC_ARMOR_ICON_URL, label: 'Elástico', theme: typePurpleTheme }
+  { value: 'Light',   icon: GENERIC_ARMOR_ICON_URL, label: 'Light', theme: typeRedTheme },
+  { value: 'Heavy',   icon: GENERIC_ARMOR_ICON_URL, label: 'Heavy', theme: typeYellowTheme },
+  { value: 'Special', icon: GENERIC_ARMOR_ICON_URL, label: 'Special', theme: typeBlueTheme },
+  { value: 'Elastic', icon: GENERIC_ARMOR_ICON_URL, label: 'Elastic', theme: typePurpleTheme }
 ];
 const combatClassOptions = [
   { value: 'Striker', label: 'Striker', theme: strikerTheme },
